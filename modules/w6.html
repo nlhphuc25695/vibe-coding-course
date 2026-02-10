@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W6 - Thiết kế vòng QA để kiểm soát đầu ra AI | Vibe Marketing Lab</title>
+    <meta name="description" content="Mô-đun W6: Thiết kế vòng QA để kiểm soát đầu ra AI. Bài học dạng bài dài, có ví dụ trực quan, số liệu, bài tập, sản phẩm và KPI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./module.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../index.html#modules">← Quay lại danh sách mô-đun</a>
+        <nav class="nav-links" aria-label="Điều hướng mô-đun">
+          <a href="./w5.html">Tuần 5</a>
+          <a href="../index.html#w6">Bản rút gọn</a>
+          <a href="./w7.html">Tuần 7</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Kỹ năng • Tuần 6 • 19 phút đọc</p>
+        <h1>Thiết kế vòng QA để kiểm soát đầu ra AI</h1>
+        <p>Thiết lập quy trình QA nhanh để giảm lỗi logic, sai dữ kiện và lệch giọng thương hiệu.</p>
+        <div class="meta">
+          <span>Mức độ: Chuyên sâu</span>
+          <span>Đọc + thực hành: 19 phút đọc</span>
+          <span>Đầu ra: Sản phẩm + KPI</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Hình trực quan mô-đun</h2>
+            <figure class="figure">
+              <img src="../media/images/modules/w6.svg" alt="Sơ đồ trực quan mô-đun tuần 6" />
+              <figcaption>Sơ đồ giúp bạn nhìn nhanh cấu trúc học: từ bối cảnh đến đo lường tác động.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Bối cảnh thực tế</h2>
+            <ul>
+              <li>Khi AI tăng tốc tạo nội dung, lỗi cũng tăng theo nếu không có vòng QA chuẩn.</li>
+<li>QA tốt không cần dài, nhưng phải có checklist rõ và ai cũng dùng được.</li>
+<li>Tuần này bạn biến QA thành bước bắt buộc trước khi publish.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Khung tư duy cốt lõi</h2>
+            <ul>
+              <li>Checklist 5 điểm: Dữ liệu, Giọng thương hiệu, CTA, Tuân thủ, Định dạng.</li>
+<li>Chấm Pass/Fail thay vì nhận xét mơ hồ.</li>
+<li>Vòng phản hồi: lỗi nào lặp lại thì sửa prompt, không sửa tay mãi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Quy trình triển khai chi tiết</h2>
+            <ol>
+              <li><strong>Bước 1:</strong> Tạo checklist QA 5 điểm cho từng loại đầu ra.</li>
+<li><strong>Bước 2:</strong> Quy định nhịp QA: trước khi duyệt cuối và trước khi xuất bản.</li>
+<li><strong>Bước 3:</strong> Lưu lỗi theo mã lỗi ngắn để thống kê nhanh.</li>
+<li><strong>Bước 4:</strong> Đặt ngưỡng can thiệp: nếu lỗi &gt;30% thì chỉnh prompt hoặc brief.</li>
+<li><strong>Bước 5:</strong> Rút gọn checklist để mỗi lần QA dưới 5 phút/đầu ra.</li>
+<li><strong>Bước 6:</strong> Rà soát hàng tuần để loại bỏ lỗi lặp lại nhiều nhất.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Tình huống nhỏ với số liệu</h2>
+            <table>
+              <thead>
+                <tr><th>Chỉ số QA</th><th>Trước</th><th>Sau</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Tỷ lệ lỗi</td><td>60%</td><td>20%</td></tr>
+<tr><td>Vòng sửa trung bình</td><td>2 vòng</td><td>1 vòng</td></tr>
+<tr><td>Thời gian QA</td><td>9 phút</td><td>5 phút</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> Checklist ngắn + chấm Pass/Fail giúp giảm đáng kể rework và tăng tốc xuất bản.</p>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Sản phẩm bàn giao tuần này</h2>
+            <ul>
+              <li>Checklist QA chuẩn theo loại nội dung.</li>
+<li>Nhật ký lỗi theo mã lỗi.</li>
+<li>Bảng tổng hợp lỗi tuần để cải tiến prompt.</li>
+            </ul>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Bài tập thực hành (45-60 phút)</h2>
+            <ul>
+              <li>QA 5 đầu ra gần nhất bằng checklist mới.</li>
+<li>Tính tỷ lệ lỗi trước/sau sau 1 tuần.</li>
+<li>Sửa 2 prompt gây lỗi nhiều nhất.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>Thang đo hoàn thành</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Mô tả</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>QA cảm tính, không checklist</td></tr>
+<tr><td>Mức 1</td><td>Có checklist nhưng không đo lỗi</td></tr>
+<tr><td>Mức 2</td><td>Có đo lỗi và ngưỡng can thiệp</td></tr>
+<tr><td>Mức 3</td><td>Lỗi giảm &gt;= 40% sau 1-2 tuần</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Lỗi thường gặp</h2>
+            <ul>
+              <li>Checklist quá dài khiến đội bỏ qua.</li>
+<li>QA xong nhưng không cập nhật prompt.</li>
+<li>Không lưu lỗi theo mã nên khó phân tích.</li>
+            </ul>
+          </section>
+
+          <section class="video-card">
+            <h2>Video thực hành (tùy chọn)</h2>
+            <p>Phần học chính đã đầy đủ bằng văn bản và ví dụ. Nếu bạn muốn xem thao tác thực tế, dùng các video gợi ý sau:</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/results?search_query=AI+content+QA+checklist" target="_blank" rel="noopener noreferrer">Video gợi ý: QA cho AI content</a>
+<a href="https://www.youtube.com/results?search_query=fact+checking+marketing+content" target="_blank" rel="noopener noreferrer">Video gợi ý: Kiểm chứng dữ liệu nội dung</a>
+            </div>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Tuần này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành tuần 6</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-week="6" /> Đánh dấu hoàn thành tuần 6</label>
+              <button class="progress-btn" id="jumpToWeek" type="button">Đồng bộ về trang chính</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./w5.html">← Tuần 5</a>
+              <a class="action-link" href="../index.html#modules">Mở danh sách mô-đun</a>
+              <a class="action-link" href="./w7.html">Tuần 7 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Tuần: 6</li>
+              <li>Trụ: Kỹ năng</li>
+              <li>Thời lượng: 19 phút đọc</li>
+              <li>Mục tiêu: Thiết lập quy trình QA nhanh để giảm lỗi logic, sai dữ kiện và lệch giọng thương hiệu.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>KPI gợi ý tuần này</h3>
+            <ul>
+              <li>Có sản phẩm hoàn chỉnh và dùng được.</li>
+              <li>Có dữ liệu đo trước/sau hoặc mốc nền.</li>
+              <li>Có quyết định rõ giữ/cải tiến/dừng.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Gợi ý triển khai</h3>
+            <p>Bắt đầu từ dữ liệu thật của bạn. Đừng làm bài tập giả định, vì mục tiêu của khóa học là tạo hệ thống dùng được ngay.</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="./module.js"></script>
+  </body>
+</html>

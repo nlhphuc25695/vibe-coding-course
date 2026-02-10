@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W9 - Dựng bộ công cụ tối thiểu cho marketing AI | Vibe Marketing Lab</title>
+    <meta name="description" content="Mô-đun W9: Dựng bộ công cụ tối thiểu cho marketing AI. Bài học dạng bài dài, có ví dụ trực quan, số liệu, bài tập, sản phẩm và KPI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./module.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../index.html#modules">← Quay lại danh sách mô-đun</a>
+        <nav class="nav-links" aria-label="Điều hướng mô-đun">
+          <a href="./w8.html">Tuần 8</a>
+          <a href="../index.html#w9">Bản rút gọn</a>
+          <a href="./w10.html">Tuần 10</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Công cụ • Tuần 9 • 20 phút đọc</p>
+        <h1>Dựng bộ công cụ tối thiểu cho marketing AI</h1>
+        <p>Lắp bộ công cụ tối thiểu để chạy một luồng đơn giản nhưng ổn định.</p>
+        <div class="meta">
+          <span>Mức độ: Chuyên sâu</span>
+          <span>Đọc + thực hành: 20 phút đọc</span>
+          <span>Đầu ra: Sản phẩm + KPI</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Hình trực quan mô-đun</h2>
+            <figure class="figure">
+              <img src="../media/images/modules/w9.svg" alt="Sơ đồ trực quan mô-đun tuần 9" />
+              <figcaption>Sơ đồ giúp bạn nhìn nhanh cấu trúc học: từ bối cảnh đến đo lường tác động.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Bối cảnh thực tế</h2>
+            <ul>
+              <li>Bộ công cụ quá phức tạp làm đội tốn thời gian sửa lỗi thay vì tạo giá trị.</li>
+<li>Giai đoạn đầu nên ưu tiên luồng rõ ràng, ít điểm hỏng và có nhật ký.</li>
+<li>Tuần này bạn dựng luồng cơ bản từ đầu vào đến đầu ra có nhật ký.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Khung tư duy cốt lõi</h2>
+            <ul>
+              <li>Mô hình 4 lớp: Kích hoạt → Hành động AI → Lưu đầu ra → Nhật ký.</li>
+<li>Nguyên tắc tối giản: mỗi luồng chỉ giải quyết 1 mục tiêu cụ thể.</li>
+<li>Thiết kế lỗi có thể xử lý: có phương án dự phòng khi API hoặc dữ liệu lỗi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Quy trình triển khai chi tiết</h2>
+            <ol>
+              <li><strong>Bước 1:</strong> Chọn kích hoạt ổn định: dòng mới trong Google Sheets.</li>
+<li><strong>Bước 2:</strong> Thiết lập hành động AI để tạo bản nháp theo prompt chuẩn.</li>
+<li><strong>Bước 3:</strong> Ghi đầu ra vào Google Docs hoặc tab riêng trong Sheets.</li>
+<li><strong>Bước 4:</strong> Tạo nhật ký lỗi: thời gian chạy, trạng thái, thông báo lỗi.</li>
+<li><strong>Bước 5:</strong> Chạy thử 5 lần liên tiếp với dữ liệu khác nhau.</li>
+<li><strong>Bước 6:</strong> Khóa phiên bản luồng sau khi đạt ổn định.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Tình huống nhỏ với số liệu</h2>
+            <table>
+              <thead>
+                <tr><th>Tác vụ</th><th>Thủ công</th><th>Tự động</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Bản nháp 1 bài</td><td>40 phút</td><td>15 phút</td></tr>
+<tr><td>Nhập dữ liệu</td><td>10 phút</td><td>2 phút</td></tr>
+<tr><td>Tổng hợp nhật ký</td><td>15 phút</td><td>3 phút</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> Một luồng tối giản nhưng có nhật ký giúp đội tự tin mở rộng dần mà không mất kiểm soát.</p>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Sản phẩm bàn giao tuần này</h2>
+            <ul>
+              <li>Sơ đồ bộ công cụ 1 trang.</li>
+<li>Luồng chạy thật 5 lần liên tiếp.</li>
+<li>Bảng nhật ký lỗi và quy tắc xử lý lỗi.</li>
+            </ul>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Bài tập thực hành (45-60 phút)</h2>
+            <ul>
+              <li>Thiết kế và chạy 1 luồng từ Sheets → AI → Docs.</li>
+<li>Ghi lại 3 lỗi đầu tiên và cách xử lý.</li>
+<li>Tối ưu để đạt 5 lần chạy liên tiếp không lỗi.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>Thang đo hoàn thành</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Mô tả</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Chỉ có ý tưởng stack</td></tr>
+<tr><td>Mức 1</td><td>Luồng chạy nhưng thiếu nhật ký</td></tr>
+<tr><td>Mức 2</td><td>Luồng + nhật ký + phương án dự phòng</td></tr>
+<tr><td>Mức 3</td><td>Luồng ổn định &gt;= 5 lần liên tiếp</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Lỗi thường gặp</h2>
+            <ul>
+              <li>Thêm quá nhiều mô-đun ngay từ đầu.</li>
+<li>Không có bước nhật ký lỗi.</li>
+<li>Không tách dữ liệu kiểm thử với dữ liệu thật.</li>
+            </ul>
+          </section>
+
+          <section class="video-card">
+            <h2>Video thực hành (tùy chọn)</h2>
+            <p>Phần học chính đã đầy đủ bằng văn bản và ví dụ. Nếu bạn muốn xem thao tác thực tế, dùng các video gợi ý sau:</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/results?search_query=zapier+beginner+tutorial" target="_blank" rel="noopener noreferrer">Video gợi ý: Zapier cho người mới</a>
+<a href="https://www.youtube.com/results?search_query=make+automation+beginner" target="_blank" rel="noopener noreferrer">Video gợi ý: Make luồng cơ bản</a>
+            </div>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Tuần này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành tuần 9</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-week="9" /> Đánh dấu hoàn thành tuần 9</label>
+              <button class="progress-btn" id="jumpToWeek" type="button">Đồng bộ về trang chính</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./w8.html">← Tuần 8</a>
+              <a class="action-link" href="../index.html#modules">Mở danh sách mô-đun</a>
+              <a class="action-link" href="./w10.html">Tuần 10 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Tuần: 9</li>
+              <li>Trụ: Công cụ</li>
+              <li>Thời lượng: 20 phút đọc</li>
+              <li>Mục tiêu: Lắp bộ công cụ tối thiểu để chạy một luồng đơn giản nhưng ổn định.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>KPI gợi ý tuần này</h3>
+            <ul>
+              <li>Có sản phẩm hoàn chỉnh và dùng được.</li>
+              <li>Có dữ liệu đo trước/sau hoặc mốc nền.</li>
+              <li>Có quyết định rõ giữ/cải tiến/dừng.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Gợi ý triển khai</h3>
+            <p>Bắt đầu từ dữ liệu thật của bạn. Đừng làm bài tập giả định, vì mục tiêu của khóa học là tạo hệ thống dùng được ngay.</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="./module.js"></script>
+  </body>
+</html>
