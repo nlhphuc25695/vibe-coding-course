@@ -7,7 +7,7 @@
   --accent-a: #f97316;
   --accent-b: #0ea5a5;
   --radius: 16px;
-  --shadow: 0 14px 34px rgba(18, 33, 61, 0.12);
+  --shadow: 0 10px 24px rgba(18, 33, 61, 0.1);
 }
 
 * {
@@ -139,8 +139,11 @@ h2 {
 }
 
 h4 {
-  margin-top: 14px;
-  font-size: 1.02rem;
+  margin-top: 12px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #0f766e;
 }
 
 .hero-copy {
@@ -247,6 +250,29 @@ h4 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.lesson-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lesson-links a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: #fff;
+}
+
+.lesson-links a:hover {
+  color: #0f766e;
+  border-color: #a7d9d4;
+}
+
 .pillar-card,
 .project-card,
 .resource-block,
@@ -346,15 +372,17 @@ h4 {
 
 .lesson-body {
   padding: 14px 16px 16px;
+  display: grid;
+  gap: 10px;
 }
 
 .lesson-body p {
-  margin: 0 0 10px;
+  margin: 0;
   line-height: 1.65;
 }
 
 .case-card {
-  margin-top: 10px;
+  margin-top: 0;
   padding: 12px;
   background: #fff7ed;
 }
@@ -374,7 +402,7 @@ h4 {
 }
 
 .example-output {
-  margin-top: 12px;
+  margin-top: 0;
   padding: 12px;
   background: #0f172a;
   color: #e2e8f0;
