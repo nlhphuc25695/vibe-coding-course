@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720">
+  <defs>
+    <style>
+      .title{font:700 26px Arial,sans-serif;fill:#111827}
+      .label{font:700 18px Arial,sans-serif;fill:#0f172a}
+      .text{font:500 14px Arial,sans-serif;fill:#1f2937}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="720" fill="#f8fafc"/>
+  <text x="40" y="52" class="title">Creative Test Tracker - Vong lap toi uu</text>
+
+  <circle cx="500" cy="170" r="90" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="455" y="165" class="label">Hypothesis</text>
+  <text x="438" y="190" class="text">Gia thuyet + KPI</text>
+
+  <circle cx="760" cy="300" r="90" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="730" y="295" class="label">Variants</text>
+  <text x="716" y="320" class="text">Tao bien the</text>
+
+  <circle cx="760" cy="520" r="90" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="735" y="515" class="label">Test</text>
+  <text x="708" y="540" class="text">Chay va thu data</text>
+
+  <circle cx="500" cy="630" r="90" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="460" y="625" class="label">Debrief</text>
+  <text x="430" y="650" class="text">Doc ket qua + bai hoc</text>
+
+  <circle cx="240" cy="520" r="90" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="205" y="515" class="label">Decision</text>
+  <text x="190" y="540" class="text">Keep/Iterate/Drop</text>
+
+  <circle cx="240" cy="300" r="90" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+  <text x="205" y="295" class="label">Update</text>
+  <text x="182" y="320" class="text">Cap nhat rule test</text>
+
+  <line x1="580" y1="210" x2="680" y2="260" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="760" y1="390" x2="760" y2="430" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="680" y1="560" x2="580" y2="600" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="420" y1="600" x2="320" y2="560" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="240" y1="430" x2="240" y2="390" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="320" y1="260" x2="420" y2="210" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400">
+  <defs>
+    <style>
+      .title{font:700 26px Arial,sans-serif;fill:#111827}
+      .label{font:700 18px Arial,sans-serif;fill:#0f172a}
+      .text{font:500 14px Arial,sans-serif;fill:#1f2937}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="400" fill="#f8fafc"/>
+  <text x="40" y="52" class="title">Lead Nurture Mini Flow - Huong dan tung buoc</text>
+
+  <rect x="40" y="110" width="220" height="180" rx="14" ry="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="75" y="150" class="label">1. Capture</text>
+  <text x="62" y="178" class="text">Form / landing page</text>
+  <text x="62" y="203" class="text">Luu vao sheet/CRM</text>
+
+  <rect x="300" y="110" width="220" height="180" rx="14" ry="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="340" y="150" class="label">2. Segment</text>
+  <text x="320" y="178" class="text">Rule + AI phan nhom</text>
+  <text x="320" y="203" class="text">Cold / Warm / Hot</text>
+
+  <rect x="560" y="110" width="220" height="180" rx="14" ry="14" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="585" y="150" class="label">3. Sequence</text>
+  <text x="580" y="178" class="text">Email 1 -> 2 -> 3</text>
+  <text x="580" y="203" class="text">CTA theo segment</text>
+
+  <rect x="820" y="110" width="220" height="180" rx="14" ry="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="855" y="150" class="label">4. Track</text>
+  <text x="840" y="178" class="text">Open rate / CTR</text>
+  <text x="840" y="203" class="text">Chuyen buoc funnel</text>
+
+  <rect x="1080" y="110" width="160" height="180" rx="14" ry="14" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="1105" y="150" class="label">5. Improve</text>
+  <text x="1092" y="178" class="text">Sua subject</text>
+  <text x="1092" y="203" class="text">Sua CTA</text>
+
+  <line x1="260" y1="200" x2="292" y2="200" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="520" y1="200" x2="552" y2="200" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="780" y1="200" x2="812" y2="200" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1040" y1="200" x2="1072" y2="200" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

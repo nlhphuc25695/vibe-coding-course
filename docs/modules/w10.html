@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W10 - Dự án mini 1: Content Engine Lite | Vibe Marketing Lab</title>
+    <meta name="description" content="Mô-đun W10: Dự án mini 1 Content Engine Lite. Bài học dạng bài dài, có ví dụ trực quan, số liệu, bài tập, sản phẩm và KPI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./module.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../index.html#modules">← Quay lại danh sách mô-đun</a>
+        <nav class="nav-links" aria-label="Điều hướng mô-đun">
+          <a href="./w9.html">Tuần 9</a>
+          <a href="../index.html#w10">Bản rút gọn</a>
+          <a href="./w11.html">Tuần 11</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Công cụ • Tuần 10 • 25 phút đọc</p>
+        <h1>Dự án mini 1: Content Engine Lite</h1>
+        <p>Xây cỗ máy nội dung bán tự động từ brief đến lịch đăng với chất lượng kiểm soát được.</p>
+        <div class="meta">
+          <span>Mức độ: Chuyên sâu</span>
+          <span>Đọc + thực hành: 25 phút đọc</span>
+          <span>Đầu ra: Sản phẩm + KPI</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Hình trực quan mô-đun</h2>
+            <figure class="figure">
+              <img src="../media/images/modules/w10.svg" alt="Sơ đồ trực quan mô-đun tuần 10" />
+              <figcaption>Sơ đồ giúp bạn nhìn nhanh cấu trúc học: từ bối cảnh đến đo lường tác động.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Bối cảnh thực tế</h2>
+            <ul>
+              <li>Đội nội dung thường mất nhiều thời gian ở khâu ý tưởng và soạn nháp.</li>
+<li>Nếu có hệ thống chuẩn, marketer tập trung vào chiến lược và bài học thị trường thay vì làm tay.</li>
+<li>Tuần này bạn tạo một hệ thống nội dung chạy được trong ngữ cảnh thật.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Khung tư duy cốt lõi</h2>
+            <ul>
+              <li>Luồng 5 bước: Brief chuẩn → Ý tưởng → Bản nháp → QA → Hàng đợi xuất bản.</li>
+<li>Tách rõ nơi chứa dữ liệu: brief, bản nháp, trạng thái QA, lịch xuất bản.</li>
+<li>Mọi đầu ra phải có trạng thái để theo dõi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Quy trình triển khai chi tiết</h2>
+            <ol>
+              <li><strong>Bước 1:</strong> Tạo bảng <code>content_briefs</code> với cột chuẩn (chân dung khách hàng, mục tiêu, CTA, hạn chót).</li>
+<li><strong>Bước 2:</strong> Dùng tự động hóa gọi AI sinh 2 ý tưởng + 1 bản nháp cho mỗi brief.</li>
+<li><strong>Bước 3:</strong> QA theo checklist tuần 6 và chấm trạng thái ĐẠT/CẦN SỬA.</li>
+<li><strong>Bước 4:</strong> Đẩy đầu ra đạt chuẩn vào lịch xuất bản theo tuần.</li>
+<li><strong>Bước 5:</strong> Theo dõi KPI thời gian và tỷ lệ đúng lịch.</li>
+<li><strong>Bước 6:</strong> Tối ưu prompt khi tỷ lệ ĐẠT dưới mục tiêu.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Tình huống nhỏ với số liệu</h2>
+            <table>
+              <thead>
+                <tr><th>KPI</th><th>Trước</th><th>Sau 2 tuần</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Tổng giờ sản xuất tuần</td><td>6 giờ</td><td>3.5 giờ</td></tr>
+<tr><td>Xuất bản đúng lịch</td><td>60%</td><td>85%</td></tr>
+<tr><td>Qua QA vòng 1</td><td>55%</td><td>80%</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> Content Engine Lite giúp giảm tải sản xuất, đồng thời vẫn giữ được kiểm soát chất lượng qua QA.</p>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Sản phẩm bàn giao tuần này</h2>
+            <ul>
+              <li>Bảng brief + bản nháp + trạng thái QA.</li>
+<li>Lịch đăng nội dung theo tuần.</li>
+<li>Bảng điều khiển mini cho tốc độ và chất lượng.</li>
+            </ul>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Bài tập thực hành (45-60 phút)</h2>
+            <ul>
+              <li>Chạy hệ thống với 6 brief trong 1 tuần.</li>
+<li>Đo thời gian từng bước và tỷ lệ QA ĐẠT.</li>
+<li>Viết báo cáo 1 trang: điều gì nên giữ, điều gì cần cải tiến.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>Thang đo hoàn thành</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Mô tả</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Chưa chạy luồng thật</td></tr>
+<tr><td>Mức 1</td><td>Chạy được nhưng thiếu QA</td></tr>
+<tr><td>Mức 2</td><td>Có QA + KPI theo dõi</td></tr>
+<tr><td>Mức 3</td><td>Giảm &gt;=30% thời gian và tăng đúng lịch</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Lỗi thường gặp</h2>
+            <ul>
+              <li>Brief chưa chuẩn nên đầu ra lệch.</li>
+<li>Không có hàng đợi xuất bản rõ ràng.</li>
+<li>Không theo dõi trạng thái QA theo từng bài.</li>
+            </ul>
+          </section>
+
+          <section class="video-card">
+            <h2>Video thực hành (tùy chọn)</h2>
+            <p>Phần học chính đã đầy đủ bằng văn bản và ví dụ. Nếu bạn muốn xem thao tác thực tế, dùng các video gợi ý sau:</p>
+            <div class="video-links">
+              <a href="https://www.youtube.com/results?search_query=content+luồng+automation" target="_blank" rel="noopener noreferrer">Video gợi ý: Luồng tự động hóa nội dung</a>
+<a href="https://www.youtube.com/results?search_query=editorial+calendar+google+sheets" target="_blank" rel="noopener noreferrer">Video gợi ý: Lịch biên tập trên Google Sheets</a>
+            </div>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Tuần này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành tuần 10</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-week="10" /> Đánh dấu hoàn thành tuần 10</label>
+              <button class="progress-btn" id="jumpToWeek" type="button">Đồng bộ về trang chính</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./w9.html">← Tuần 9</a>
+              <a class="action-link" href="../index.html#modules">Mở danh sách mô-đun</a>
+              <a class="action-link" href="./w11.html">Tuần 11 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Tuần: 10</li>
+              <li>Trụ: Công cụ</li>
+              <li>Thời lượng: 25 phút đọc</li>
+              <li>Mục tiêu: Xây cỗ máy nội dung bán tự động từ brief đến lịch đăng với chất lượng kiểm soát được.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>KPI gợi ý tuần này</h3>
+            <ul>
+              <li>Có sản phẩm hoàn chỉnh và dùng được.</li>
+              <li>Có dữ liệu đo trước/sau hoặc mốc nền.</li>
+              <li>Có quyết định rõ giữ/cải tiến/dừng.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Gợi ý triển khai</h3>
+            <p>Bắt đầu từ dữ liệu thật của bạn. Đừng làm bài tập giả định, vì mục tiêu của khóa học là tạo hệ thống dùng được ngay.</p>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="./module.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <defs>
+    <style>
+      .title{font:700 28px Arial,sans-serif;fill:#0f172a}
+      .label{font:600 20px Arial,sans-serif;fill:#0f172a}
+      .text{font:500 16px Arial,sans-serif;fill:#1f2937}
+      .small{font:500 14px Arial,sans-serif;fill:#334155}
+      .box{rx:18;ry:18;stroke-width:2}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#0f172a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="520" fill="#f8fafc"/>
+  <text x="50" y="55" class="title">Lo trinh 12 tuan: Marketer -> Vibe Coding</text>
+
+  <rect class="box" x="50" y="110" width="390" height="260" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="80" y="150" class="label">Mindset (Tuan 1-3)</text>
+  <text x="80" y="185" class="text">- Tu duy he thong marketing</text>
+  <text x="80" y="215" class="text">- Tu duy test nhanh</text>
+  <text x="80" y="245" class="text">- Human vs AI role split</text>
+  <text x="80" y="295" class="small">Artifact: Workflow map + backlog test + AI matrix</text>
+
+  <rect class="box" x="505" y="110" width="390" height="260" fill="#dcfce7" stroke="#16a34a"/>
+  <text x="535" y="150" class="label">Skillset (Tuan 4-8)</text>
+  <text x="535" y="185" class="text">- Phan ra bai toan</text>
+  <text x="535" y="215" class="text">- Prompting + QA + Do luong</text>
+  <text x="535" y="245" class="text">- Vong lap cai tien hang tuan</text>
+  <text x="535" y="295" class="small">Artifact: Brief templates + prompt library + scorecard</text>
+
+  <rect class="box" x="960" y="110" width="390" height="260" fill="#fee2e2" stroke="#dc2626"/>
+  <text x="990" y="150" class="label">Toolset (Tuan 9-12)</text>
+  <text x="990" y="185" class="text">- Dung stack toi thieu</text>
+  <text x="990" y="215" class="text">- Xay 3 mini-project MVP</text>
+  <text x="990" y="245" class="text">- Demo va do KPI truoc/sau</text>
+  <text x="990" y="295" class="small">Artifact: 3 workflow chay that + dashboard KPI</text>
+
+  <line x1="440" y1="240" x2="495" y2="240" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="895" y1="240" x2="950" y2="240" stroke="#0f172a" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="50" y="405" width="1300" height="78" rx="14" ry="14" fill="#e2e8f0"/>
+  <text x="80" y="452" class="label">Outcome: 3 mini-project portfolio + bo KPI speed/quality/outcome + roadmap nang cap 30 ngay</text>
+</svg>
