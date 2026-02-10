@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360">
+  <defs>
+    <style>
+      .title{font:700 26px Arial,sans-serif;fill:#111827}
+      .label{font:700 18px Arial,sans-serif;fill:#0f172a}
+      .text{font:500 14px Arial,sans-serif;fill:#1f2937}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="360" fill="#f8fafc"/>
+  <text x="40" y="52" class="title">Content Engine Lite - Workflow huong dan</text>
+
+  <rect x="40" y="100" width="210" height="170" rx="14" ry="14" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="70" y="135" class="label">1. Brief</text>
+  <text x="60" y="165" class="text">Input: Muc tieu, audience, CTA</text>
+
+  <rect x="290" y="100" width="210" height="170" rx="14" ry="14" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+  <text x="330" y="135" class="label">2. Idea</text>
+  <text x="305" y="165" class="text">AI tao 5-10 goc noi dung</text>
+
+  <rect x="540" y="100" width="210" height="170" rx="14" ry="14" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/>
+  <text x="570" y="135" class="label">3. Draft</text>
+  <text x="555" y="165" class="text">AI viet draft theo format</text>
+
+  <rect x="790" y="100" width="210" height="170" rx="14" ry="14" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="825" y="135" class="label">4. QA</text>
+  <text x="805" y="165" class="text">Checklist brand + logic</text>
+
+  <rect x="1040" y="100" width="210" height="170" rx="14" ry="14" fill="#e2e8f0" stroke="#475569" stroke-width="2"/>
+  <text x="1060" y="135" class="label">5. Publish Queue</text>
+  <text x="1060" y="165" class="text">Lich dang + KPI tracking</text>
+
+  <line x1="250" y1="185" x2="282" y2="185" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="500" y1="185" x2="532" y2="185" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="750" y1="185" x2="782" y2="185" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="185" x2="1032" y2="185" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>
