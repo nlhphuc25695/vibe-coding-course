@@ -76,7 +76,7 @@ function saveProgress(data) {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
   } catch {
-    // Ignore storage failures (private mode, etc.)
+    // Ignore storage failures
   }
 }
 

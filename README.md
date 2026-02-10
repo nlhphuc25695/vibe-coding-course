@@ -1,4 +1,4 @@
-# UX-UI Prototype
+# Vibe Coding Course Web
 
 ## Open nhanh
 - Mở trực tiếp file: `/Users/phucnguyen/Downloads/Codex/Khoá học /web/index.html`
@@ -11,19 +11,11 @@ python3 -m http.server 8080
 Sau đó truy cập: `http://localhost:8080`
 
 ## Scope bản này
-- Đã nâng cấp thành bản học thử trực tiếp trên web.
-- Đã đổ đầy đủ nội dung khóa học 12 tuần.
+- Bản học thử full content, cấu trúc theo 3 trụ: Mindset → Skillset → Toolset.
+- Mỗi tuần có: Goal, Core Concept, Why, Steps, Mini‑case + số liệu, Exercise, Artifact, KPI/Rubric, Pitfalls.
+- References chỉ là tùy chọn, không dùng như nội dung chính.
 
-## Nâng cấp UX-UI v3
-- Progress bar theo vị trí cuộn trang.
-- Navigation hỗ trợ cả desktop và mobile menu toggle.
-- Bottom tab cố định cho mobile để điều hướng nhanh theo section học.
-- Nội dung tuần học hiển thị dạng accordion để đọc dài trên điện thoại dễ hơn.
-
-## Mobile readiness
-- Nút và link có tap target >= 44px.
-- Menu mobile full-width, dễ thao tác một tay.
-- Đóng menu khi chạm ra ngoài.
-- Tránh tràn ngang; hình ảnh co giãn đúng tỉ lệ.
-- Roadmap cuộn ngang có snap trên màn hình nhỏ.
-- Bottom tab tự highlight section đang đọc.
+## Tính năng học tập
+- Checkbox hoàn thành từng tuần + lưu tiến độ localStorage.
+- Progress bar tổng cho 12 tuần.
+- Bottom tab mobile để chuyển nhanh giữa Mindset/Skillset/Toolset/Projects.

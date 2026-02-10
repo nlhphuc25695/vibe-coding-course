@@ -22,21 +22,21 @@
       <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
 
       <nav id="siteNav" class="site-nav" aria-label="Main navigation">
-        <a href="#pillars">3 Trụ</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#lessons">12 Tuần</a>
+        <a href="#mindset">Mindset</a>
+        <a href="#skillset">Skillset</a>
+        <a href="#toolset">Toolset</a>
         <a href="#projects">Projects</a>
-        <a href="#resources">Video</a>
+        <a href="#references">References</a>
       </nav>
     </header>
 
     <main>
       <section class="hero section" id="home" data-nav="home">
-        <p class="kicker">Mobile-first v3 + Full content loaded</p>
-        <h1>Marketer -> Vibe Coding: học trực tiếp trên web</h1>
+        <p class="kicker">Pillar-first + Full content</p>
+        <h1>Marketer → Vibe Coding: học theo 3 trụ, làm ra kết quả</h1>
         <p class="hero-copy">
-          Toàn bộ nội dung khóa học đã được đưa vào trang này. Bạn có thể học theo thứ tự: Onboarding -> Mindset -> Skillset -> Toolset,
-          theo nhịp 4-6 giờ/tuần.
+          Toàn bộ bài học đã được viết lại theo Mindset → Skillset → Toolset. Mỗi tuần có cấu trúc học rõ ràng, mini‑case có số liệu,
+          bài tập, artifact và KPI cụ thể để bạn học thử ngay.
         </p>
         <div class="hero-stats">
           <article><strong>12</strong><span>Tuần học</span></article>
@@ -55,7 +55,7 @@
         </div>
       </section>
 
-      <section class="section" id="pillars" data-nav="pillars">
+      <section class="section" id="pillars">
         <div class="section-head">
           <p>Core Structure</p>
           <h2>3 Trụ Cột Cố Định</h2>
@@ -63,243 +63,776 @@
         <div class="pillar-grid">
           <article class="pillar-card mindset">
             <h3>Mindset (Tuần 1-3)</h3>
-            <p>Tư duy hệ thống, test nhanh, phân vai Human x AI.</p>
+            <p>Tư duy hệ thống, test nhanh, phân vai Human x AI để tối ưu đúng chỗ.</p>
           </article>
           <article class="pillar-card skillset">
             <h3>Skillset (Tuần 4-8)</h3>
-            <p>Phân rã bài toán, prompt thực dụng, QA, đo lường, retro.</p>
+            <p>Phân rã bài toán, prompt thực dụng, QA, đo lường, retro hằng tuần.</p>
           </article>
           <article class="pillar-card toolset">
             <h3>Toolset (Tuần 9-12)</h3>
-            <p>Dựng stack và triển khai 3 mini-project chạy thật.</p>
+            <p>Dựng stack và triển khai 3 mini‑project chạy thật.</p>
           </article>
         </div>
-      </section>
-
-      <section class="section" id="roadmap" data-nav="roadmap">
-        <div class="section-head">
-          <p>Journey</p>
-          <h2>Roadmap 12 Tuần</h2>
-        </div>
-        <img class="course-img" src="media/images/course-roadmap.svg" alt="Lộ trình 12 tuần" />
-        <div class="roadmap-grid">
+        <div class="roadmap-strip">
           <span>W1 System Map</span><span>W2 Test Mindset</span><span>W3 AI Split</span><span>W4 Brief Design</span>
           <span>W5 Prompt Ops</span><span>W6 QA Loop</span><span>W7 KPI Baseline</span><span>W8 Weekly Retro</span>
           <span>W9 Stack Setup</span><span>W10 Content Engine</span><span>W11 Creative Tracker</span><span>W12 Lead Nurture</span>
         </div>
       </section>
 
-      <section class="section" id="onboarding" data-nav="lessons">
+      <section class="section pillar-section" id="mindset" data-nav="mindset">
         <div class="section-head">
-          <p>0) Setup</p>
-          <h2>Onboarding Trước Tuần 1</h2>
+          <p>Pillar 1</p>
+          <h2>Mindset</h2>
         </div>
-        <div class="lesson-card">
-          <h3>Mục tiêu</h3>
+
+        <article class="lesson-card">
+          <h3>Preflight (Tuần 0) — Onboarding nhanh</h3>
           <ul>
-            <li>Chốt business context và KPI nền để đo trước/sau.</li>
-            <li>Cài stack tối thiểu để học liền mạch.</li>
-          </ul>
-          <h3>Checklist setup (90 phút)</h3>
-          <ol>
             <li>Tạo Google Sheet <code>VibeMarketing_CourseHub</code> với 4 tab: <code>Workflow_Current</code>, <code>Hypothesis_Backlog</code>, <code>Prompt_Library</code>, <code>KPI_Baseline</code>.</li>
             <li>Tạo folder Drive <code>VibeCoding-Marketing</code>.</li>
-            <li>Tạo tài khoản Make hoặc Zapier.</li>
-            <li>Tạo dashboard Looker Studio kết nối sheet.</li>
-          </ol>
-          <h3>KPI baseline bắt buộc đo</h3>
-          <ul>
-            <li><code>Time-to-first-draft</code> (phút/task)</li>
-            <li><code>Weekly output consistency</code> (số asset publish đúng lịch)</li>
-            <li><code>Conversion proxy</code> (CTR/open rate/lead-to-next-step)</li>
+            <li>Tạo tài khoản Make/Zapier và tạo dashboard Looker Studio kết nối sheet.</li>
           </ul>
-        </div>
-      </section>
+          <p><strong>KPI baseline:</strong> Time-to-first-draft, Weekly output consistency, Conversion proxy.</p>
+        </article>
 
-      <section class="section" id="lessons" data-nav="lessons">
-        <div class="section-head">
-          <p>Full Lessons</p>
-          <h2>Nội Dung 12 Tuần</h2>
-        </div>
+        <details class="lesson" open>
+          <summary><span class="lesson-tag">W1</span> Tư duy hệ thống marketing</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Biến marketing từ danh sách việc rời rạc thành chuỗi vận hành có input/output.</p>
 
-        <details class="week" open>
-          <summary>Tuần 1 - Tư duy hệ thống marketing</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Nhìn marketing như dây chuyền vận hành thay vì danh sách việc rời rạc.</p>
-            <p><strong>Bài giảng cốt lõi:</strong> Marketing là chuỗi Input -> Process -> Output -> Feedback.</p>
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Workflow = Input → Process → Output → Feedback.</li>
+              <li>Tối ưu sai điểm nghẽn = phí thời gian.</li>
+              <li>Đo thời gian thực tế, không ước lượng.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Khi chưa nhìn thấy dòng chảy, bạn thường tối ưu tiểu tiết thay vì sửa lỗi hệ thống.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Liệt kê 1 quy trình thật bạn đang làm.</li>
-              <li>Vẽ 5 bước: thu thập input -> ý tưởng -> draft -> review -> publish.</li>
+              <li>Liệt kê 1 quy trình marketing thật (ví dụ: content tuần).</li>
+              <li>Vẽ 5 bước: input → idea → draft → review → publish.</li>
               <li>Ghi thời gian thực tế từng bước.</li>
-              <li>Đánh dấu bottleneck: <code>T</code> (tốn thời gian), <code>E</code> (dễ sai), <code>R</code> (lặp lại cao).</li>
+              <li>Đánh dấu bottleneck: T (tốn thời gian), E (dễ sai), R (lặp lại cao).</li>
             </ol>
-            <p><strong>Artifact:</strong> Workflow map + 5 bottleneck ưu tiên.</p>
-            <p><strong>Rubric:</strong> 0 (chỉ list task), 1 (có luồng nhưng thiếu thời gian), 2 (đủ luồng + thời gian + bottleneck).</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Bước</th><th>Thời gian cũ</th><th>Phát hiện</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Idea</td><td>90 phút</td><td>Rất lặp lại</td></tr>
+                  <tr><td>Draft</td><td>150 phút</td><td>Dễ sai cấu trúc</td></tr>
+                  <tr><td>Review</td><td>60 phút</td><td>Thiếu checklist</td></tr>
+                </tbody>
+              </table>
+              <p>Kết luận: bottleneck chính nằm ở Idea + Draft, cần chuẩn hóa prompt và QA.</p>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Input: brief tuần -> Process: 5 bước -> Output: 6 bài đăng
+Bottleneck: Idea (T,R), Draft (E)
+Action: xây prompt + QA checklist</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo workflow map + 5 bottleneck ưu tiên.</p>
+
+            <h4>Artifact</h4>
+            <p>Workflow map + danh sách bottleneck có tag T/E/R.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Rubric: 0 (chỉ list task), 1 (có luồng), 2 (đủ luồng + thời gian + bottleneck).</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Đánh dấu bottleneck theo cảm tính, không đo thời gian.</li>
+              <li>Thiếu bước feedback nên không thấy lỗi lặp lại.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="1" /> Đánh dấu đã hoàn thành tuần 1</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 2 - Tư duy thử nghiệm nhanh</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Ra quyết định bằng test nhỏ có KPI thay vì cảm tính.</p>
-            <p><strong>Framework:</strong> Hypothesis -> Test Design -> Success Metric -> Decision Rule.</p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W2</span> Tư duy thử nghiệm nhanh</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Ra quyết định bằng test nhỏ có KPI thay vì cảm tính.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Giả thuyết luôn đi kèm metric và điều kiện thắng/thua.</li>
+              <li>Test nhỏ giúp giảm rủi ro.</li>
+              <li>Chọn giả thuyết theo Impact × Ease × Speed.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Không có test nhỏ, bạn thường “đốt” ngân sách vào quyết định thiếu bằng chứng.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo 10 giả thuyết theo message/format/CTA.</li>
-              <li>Chấm điểm Impact x Ease x Speed.</li>
+              <li>Viết 10 giả thuyết (message/format/CTA).</li>
+              <li>Chấm điểm Impact × Ease × Speed.</li>
               <li>Chọn 3 giả thuyết ưu tiên.</li>
-              <li>Viết rule kết luận: scale / iterate / drop.</li>
+              <li>Đặt rule: scale / iterate / drop.</li>
             </ol>
-            <p><strong>Artifact:</strong> Hypothesis backlog + 3 test ưu tiên.</p>
-            <p><strong>Rubric:</strong> 0 (không metric), 1 (có metric nhưng thiếu rule), 2 (đủ metric + threshold + next action).</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Giả thuyết</th><th>KPI mục tiêu</th><th>Kết quả</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Hook dạng “data-led”</td><td>CTR ≥ 2.5%</td><td>3.1% (scale)</td></tr>
+                  <tr><td>CTA “DM nhận template”</td><td>Lead ≥ 25</td><td>18 (iterate)</td></tr>
+                  <tr><td>Format carousel</td><td>Save ≥ 120</td><td>60 (drop)</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Hypothesis: “Data-led hook tăng CTR”
+Test: 2 biến thể hook
+KPI: CTR >= 2.5%
+Decision: >=2.5% scale, 2.0-2.49 iterate, <2.0 drop</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo backlog 10 giả thuyết và chọn 3 test ưu tiên.</p>
+
+            <h4>Artifact</h4>
+            <p>Hypothesis backlog + bảng scoring.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Đủ metric, threshold và rule hành động.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Chạy test nhưng không đặt KPI trước.</li>
+              <li>Không có rule nên khó ra quyết định.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="2" /> Đánh dấu đã hoàn thành tuần 2</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 3 - Tư duy vận hành bằng AI</summary>
-          <div class="week-body">
-            <img class="inline-img" src="media/images/human-ai-matrix.svg" alt="Ma trận Human vs AI" />
-            <p><strong>Mục tiêu:</strong> Phân vai rõ việc AI làm chính và việc Human giữ quyền quyết định.</p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W3</span> Human vs AI decision boundaries</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Rõ việc AI làm chính, việc con người giữ quyền quyết định.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>AI mạnh ở tốc độ và biến thể.</li>
+              <li>Human giữ trách nhiệm thương hiệu và rủi ro pháp lý.</li>
+              <li>Task lặp lại + rủi ro thấp = AI chính.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Không phân vai rõ, AI dễ tạo sai lệch thương hiệu và tốn thời gian sửa.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Lấy 20 task lặp lại từ tuần 1.</li>
+              <li>Lấy 20 task lặp lại.</li>
               <li>Chia 4 nhóm: AI chính, AI hỗ trợ, Human chính, không automation.</li>
-              <li>Chọn 3 task pilot automation cho tuần 9.</li>
+              <li>Chọn 3 task pilot automation.</li>
             </ol>
-            <p><strong>Artifact:</strong> Human vs AI responsibility matrix.</p>
-            <p><strong>KPI:</strong> >= 30% task lặp lại nằm trong nhóm có thể automation.</p>
+
+            <img class="inline-img" src="media/images/human-ai-matrix.svg" alt="Ma trận Human vs AI" />
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Task</th><th>Phân vai</th><th>Giảm thời gian</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tạo 5 biến thể headline</td><td>AI chính</td><td>‑40%</td></tr>
+                  <tr><td>Viết thông điệp brand</td><td>Human chính</td><td>0%</td></tr>
+                  <tr><td>Tổng hợp insight survey</td><td>AI hỗ trợ</td><td>‑30%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>AI chính: tạo biến thể, gợi ý angle
+Human chính: chọn angle cuối, duyệt claim</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo ma trận Human vs AI và chọn 3 task pilot automation.</p>
+
+            <h4>Artifact</h4>
+            <p>Human vs AI responsibility matrix.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>≥ 30% task lặp lại nằm trong nhóm có thể automation.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Giao AI toàn bộ phần quyết định thương hiệu.</li>
+              <li>Bỏ qua bước QA cuối cùng của con người.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="3" /> Đánh dấu đã hoàn thành tuần 3</label>
           </div>
         </details>
+      </section>
 
-        <details class="week">
-          <summary>Tuần 4 - Phân rã bài toán marketing</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Chuyển request mơ hồ thành brief có thể giao việc và kiểm tra.</p>
-            <p><strong>Brief 1 trang:</strong> Problem, Audience, Input data, Output format, Constraint, KPI.</p>
-            <p><strong>Bài tập:</strong> Chuyển 3 task hiện tại thành 3 brief chuẩn.</p>
-            <p><strong>Artifact:</strong> 3 file brief theo template.</p>
-            <p><strong>KPI:</strong> 3/3 brief có output format và tiêu chí pass/fail.</p>
+      <section class="section pillar-section" id="skillset" data-nav="skillset">
+        <div class="section-head">
+          <p>Pillar 2</p>
+          <h2>Skillset</h2>
+        </div>
+
+        <details class="lesson" open>
+          <summary><span class="lesson-tag">W4</span> Problem decomposition → Brief</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Biến yêu cầu mơ hồ thành brief có thể giao việc và đo kết quả.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Brief 1 trang giúp giảm vòng sửa.</li>
+              <li>Mọi output phải có định dạng và tiêu chí chất lượng.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Không có brief chuẩn, AI hoặc team sẽ tạo output lệch mục tiêu.</p>
+
+            <h4>Steps</h4>
+            <ol>
+              <li>Xác định Problem, Audience, Input, Output format.</li>
+              <li>Thêm Constraint (brand/legal) và KPI.</li>
+              <li>Kiểm tra đủ dữ liệu đầu vào.</li>
+            </ol>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Trước</th><th>Sau</th><th>Impact</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>3 vòng sửa/bài</td><td>1 vòng sửa/bài</td><td>‑66% rework</td></tr>
+                  <tr><td>Thời gian brief 10 phút</td><td>25 phút</td><td>+15 phút setup</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Output format: 1 post LinkedIn (120-180 chữ)
+Quality bar: nêu 1 pain point + 1 proof + CTA
+KPI: CTR >= 2.5%</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Chuyển 3 task hiện tại thành 3 brief chuẩn.</p>
+
+            <h4>Artifact</h4>
+            <p>3 brief theo template.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>3/3 brief có output format + tiêu chí pass/fail.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Thiếu ràng buộc brand voice.</li>
+              <li>Không định nghĩa KPI nên khó đánh giá.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="4" /> Đánh dấu đã hoàn thành tuần 4</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 5 - Prompt thực dụng cho marketer</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Viết prompt ổn định output, giảm trial-and-error.</p>
-            <p><strong>Skeleton:</strong> Role + Context + Task + Constraint + Output format + Quality bar.</p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W5</span> Prompt design for consistency</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Viết prompt có cấu trúc để output ổn định, giảm trial‑and‑error.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Đặt instruction trước, tách context rõ ràng.</li>
+              <li>Chỉ định output format, độ dài, style.</li>
+              <li>Iterate prompt theo kết quả thực tế.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Prompt mơ hồ khiến output lệch chuẩn và tốn thời gian chỉnh sửa.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo 20 prompt theo 4 nhóm: research/content/ads/CRM-email.</li>
-              <li>Mỗi prompt phải có 1 QA criteria.</li>
+              <li>Role + Context + Task + Constraint + Output format.</li>
+              <li>Đưa ví dụ mẫu nếu cần.</li>
+              <li>Lưu prompt tốt vào thư viện.</li>
             </ol>
-            <p><strong>Artifact:</strong> Prompt library (sheet + markdown).</p>
-            <p><strong>KPI:</strong> Time-to-first-draft &lt; 20 phút/task.</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Prompt</th><th>Time‑to‑draft</th><th>Pass QA</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Mơ hồ</td><td>35 phút</td><td>40%</td></tr>
+                  <tr><td>Structured</td><td>18 phút</td><td>80%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Role: Growth Marketer
+Task: Viết 1 post LinkedIn
+Constraint: 120-160 chữ, giọng phân tích
+Output: 1 hook + 3 bullet + CTA</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo 20 prompt theo 4 nhóm: research, content, ads, CRM.</p>
+
+            <h4>Artifact</h4>
+            <p>Prompt library (sheet + markdown).</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Time‑to‑first‑draft &lt; 20 phút/task.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Thiếu output format nên khó QA.</li>
+              <li>Không lưu prompt tốt, phải viết lại từ đầu.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="5" /> Đánh dấu đã hoàn thành tuần 5</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 6 - QA đầu ra AI</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Giảm lỗi logic/nội dung/brand trước khi publish.</p>
-            <p><strong>Checklist QA bắt buộc:</strong></p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W6</span> QA loop for AI output</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Xây checklist QA để giảm lỗi logic/nội dung trước khi publish.</p>
+
+            <h4>Core Concept</h4>
             <ul>
-              <li>Đúng dữ liệu và số liệu.</li>
-              <li>Đúng brand voice.</li>
-              <li>CTA rõ.</li>
-              <li>Không vi phạm policy pháp lý/bản quyền.</li>
-              <li>Đúng định dạng output.</li>
+              <li>QA là bước bắt buộc, không phụ thuộc cảm tính.</li>
+              <li>Checklist giúp giảm lỗi lặp lại.</li>
             </ul>
-            <p><strong>Bài tập:</strong> QA 5 output AI và ghi % lỗi trước/sau.</p>
-            <p><strong>KPI:</strong> Giảm lỗi sửa tay >= 40%.</p>
+
+            <h4>Why It Matters</h4>
+            <p>Không QA dẫn đến sai brand voice hoặc claim sai dữ kiện.</p>
+
+            <h4>Steps</h4>
+            <ol>
+              <li>Tạo checklist 5 điểm: dữ liệu, brand voice, CTA, compliance, format.</li>
+              <li>Chấm pass/fail cho từng output.</li>
+              <li>Refine prompt nếu fail &gt; 30%.</li>
+            </ol>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Trước QA</th><th>Sau QA</th><th>Impact</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>60% lỗi</td><td>20% lỗi</td><td>‑40% lỗi</td></tr>
+                  <tr><td>2 vòng sửa</td><td>1 vòng sửa</td><td>‑50% rework</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>QA checklist: Data OK / Voice OK / CTA OK / Compliance OK / Format OK
+Result: PASS</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>QA 5 output AI và ghi % lỗi trước/sau.</p>
+
+            <h4>Artifact</h4>
+            <p>Checklist QA + log lỗi phổ biến.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Giảm lỗi sửa tay ≥ 40%.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Checklist quá dài, khó áp dụng.</li>
+              <li>Không thống kê lỗi nên không cải tiến được.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="6" /> Đánh dấu đã hoàn thành tuần 6</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 7 - Đo lường tác động</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Chứng minh AI/automation có hiệu quả bằng số.</p>
-            <p><strong>Công thức:</strong> Delta = (Sau - Trước) / Trước.</p>
-            <p><strong>Nhóm KPI:</strong> Speed, Consistency, Outcome.</p>
-            <p><strong>Bài tập:</strong> Tạo dashboard baseline + week delta.</p>
-            <p><strong>Artifact:</strong> Dashboard theo dõi 3 KPI cốt lõi.</p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W7</span> Measurement baseline & deltas</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Chứng minh hiệu quả AI/automation bằng số liệu trước/sau.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Baseline trước khi cải tiến.</li>
+              <li>Delta = (Sau - Trước) / Trước.</li>
+              <li>Đo ít nhưng đúng: speed, consistency, outcome.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Nếu không đo, bạn không biết việc cải tiến thật sự có tác động.</p>
+
+            <h4>Steps</h4>
+            <ol>
+              <li>Chọn 3 KPI cốt lõi.</li>
+              <li>Ghi baseline 2 tuần.</li>
+              <li>So sánh delta sau khi áp dụng workflow.</li>
+            </ol>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>KPI</th><th>Trước</th><th>Sau</th><th>Delta</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Time‑to‑draft</td><td>35 phút</td><td>18 phút</td><td>‑48%</td></tr>
+                  <tr><td>Publish đúng lịch</td><td>60%</td><td>85%</td><td>+25pt</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Baseline: 35m/draft
+After: 18m/draft
+Delta: -48%</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo dashboard baseline + tuần delta.</p>
+
+            <h4>Artifact</h4>
+            <p>Dashboard KPI (sheet hoặc Looker Studio).</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Ít nhất 3 KPI có số đo trước/sau.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Đo quá nhiều KPI, khó tập trung.</li>
+              <li>Không chốt baseline trước khi thay đổi.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="7" /> Đánh dấu đã hoàn thành tuần 7</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 8 - Cải tiến vòng lặp</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Duy trì cải tiến hằng tuần thay vì học xong để đó.</p>
-            <p><strong>Retro format:</strong> Keep / Stop / Improve + 2 action item có owner và due date.</p>
-            <p><strong>Bài tập:</strong> Chạy 2 vòng retro liên tiếp, mỗi vòng >= 2 cải tiến đo được.</p>
-            <p><strong>KPI:</strong> Mỗi tuần chốt >= 2 cải tiến có metric.</p>
+        <details class="lesson">
+          <summary><span class="lesson-tag">W8</span> Weekly retro & improvement</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Duy trì cải tiến hằng tuần để tránh “học xong để đó”.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Keep / Stop / Improve.</li>
+              <li>Action item có owner và deadline.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Không có retro, hệ thống sẽ quay lại trạng thái cũ.</p>
+
+            <h4>Steps</h4>
+            <ol>
+              <li>Chốt 3 mục: giữ, bỏ, cải tiến.</li>
+              <li>Chọn 2 action item có KPI đo được.</li>
+              <li>Review lại ở tuần sau.</li>
+            </ol>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Cải tiến</th><th>Ảnh hưởng</th><th>Delta</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Rút ngắn checklist QA</td><td>Time‑to‑QA</td><td>‑20%</td></tr>
+                  <tr><td>Chuẩn hóa brief</td><td>Rework</td><td>‑30%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Keep: Prompt library
+Stop: Sửa tay từng bài
+Improve: QA checklist + template</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Chạy 2 vòng retro liên tiếp, mỗi vòng ≥ 2 cải tiến.</p>
+
+            <h4>Artifact</h4>
+            <p>Weekly retro log.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Mỗi tuần chốt ≥ 2 cải tiến có số đo.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Retro chỉ ghi, không có action item.</li>
+              <li>Action item không đo lường được.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="8" /> Đánh dấu đã hoàn thành tuần 8</label>
           </div>
         </details>
+      </section>
 
-        <details class="week">
-          <summary>Tuần 9 - Dựng stack tối thiểu</summary>
-          <div class="week-body">
-            <p><strong>Mục tiêu:</strong> Dựng xong stack cho luồng marketing có AI hỗ trợ.</p>
-            <p><strong>Stack:</strong> ChatGPT + Google Sheets/Docs + Make/Zapier + Looker Studio.</p>
-            <p><strong>Luồng mẫu:</strong> Brief -> AI draft -> QA -> Publish queue -> KPI logging.</p>
+      <section class="section pillar-section" id="toolset" data-nav="toolset">
+        <div class="section-head">
+          <p>Pillar 3</p>
+          <h2>Toolset</h2>
+        </div>
+
+        <details class="lesson" open>
+          <summary><span class="lesson-tag">W9</span> Minimal stack orchestration</summary>
+          <div class="lesson-body">
+            <h4>Goal</h4>
+            <p>Dựng stack tối thiểu để luồng marketing có AI chạy ổn định.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Trigger → Action → Output → Log.</li>
+              <li>Ưu tiên workflow đơn giản, ít lỗi.</li>
+            </ul>
+
+            <h4>Why It Matters</h4>
+            <p>Stack quá phức tạp sẽ khiến bạn mất thời gian sửa lỗi hơn là tạo value.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo 1 trigger new row trong sheet.</li>
-              <li>Tạo 1 action AI generate draft.</li>
-              <li>Lưu kết quả về Docs/Sheet.</li>
+              <li>Chọn trigger: new row in Sheets.</li>
+              <li>Action 1: gọi AI tạo draft.</li>
+              <li>Action 2: lưu output vào Docs/Sheet.</li>
+              <li>Thêm log lỗi cơ bản.</li>
             </ol>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Quy trình</th><th>Manual</th><th>Automation</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Draft 1 bài</td><td>40 phút</td><td>15 phút</td></tr>
+                  <tr><td>Nhập dữ liệu</td><td>10 phút</td><td>2 phút</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Trigger: Sheet row added
+Action: AI draft
+Output: Docs + Sheet log</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Tạo 1 workflow tự động chạy từ sheet → draft → log.</p>
+
+            <h4>Artifact</h4>
+            <p>Sơ đồ stack + workflow chạy thật.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Chạy ổn định ≥ 5 lần liên tiếp không lỗi.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Thêm quá nhiều bước trước khi kiểm thử.</li>
+              <li>Không có log lỗi.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="9" /> Đánh dấu đã hoàn thành tuần 9</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 10 - Mini Project 1: Content Engine Lite</summary>
-          <div class="week-body">
+        <details class="lesson">
+          <summary><span class="lesson-tag">W10</span> Mini‑project 1: Content Engine Lite</summary>
+          <div class="lesson-body">
             <img class="inline-img" src="media/images/content-engine-flow.svg" alt="Content Engine Flow" />
-            <p><strong>Mục tiêu:</strong> Tự động hóa bán phần sản xuất content hằng tuần.</p>
+
+            <h4>Goal</h4>
+            <p>Tự động hóa bán phần quy trình sản xuất content.</p>
+
+            <h4>Core Concept</h4>
+            <ul>
+              <li>Brief chuẩn → AI idea → AI draft → QA → Publish queue.</li>
+            </ul>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo sheet <code>content_briefs</code> với các cột chuẩn.</li>
-              <li>Tạo prompt template map vào cột sheet.</li>
-              <li>Dùng automation: trigger row mới -> AI tạo idea -> AI tạo draft -> ghi vào <code>content_outputs</code>.</li>
+              <li>Tạo sheet <code>content_briefs</code> với cột chuẩn.</li>
+              <li>Dùng automation tạo idea và draft.</li>
               <li>QA bằng checklist tuần 6.</li>
-              <li>Đẩy vào lịch đăng.</li>
             </ol>
-            <p><strong>KPI:</strong> Giảm >= 30% thời gian sản xuất nội dung tuần.</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>KPI</th><th>Trước</th><th>Sau</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Time‑to‑content</td><td>6 giờ</td><td>3.5 giờ</td></tr>
+                  <tr><td>Publish đúng lịch</td><td>60%</td><td>85%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Input: 6 brief/tuần
+Output: 6 draft + lịch đăng
+QA pass rate: 80%</pre>
+            </div>
+
+            <h4>Exercise</h4>
+            <p>Chạy workflow 1 tuần và đo thời gian.</p>
+
+            <h4>Artifact</h4>
+            <p>Pipeline + dashboard theo dõi output.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Giảm ≥ 30% thời gian sản xuất.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Không chuẩn hóa brief.</li>
+              <li>Thiếu QA trước publish.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="10" /> Đánh dấu đã hoàn thành tuần 10</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 11 - Mini Project 2: Creative Test Tracker</summary>
-          <div class="week-body">
+        <details class="lesson">
+          <summary><span class="lesson-tag">W11</span> Mini‑project 2: Creative Test Tracker</summary>
+          <div class="lesson-body">
             <img class="inline-img" src="media/images/creative-test-loop.svg" alt="Creative Test Loop" />
-            <p><strong>Mục tiêu:</strong> Chuẩn hóa test loop để tăng tốc học từ creative.</p>
+
+            <h4>Goal</h4>
+            <p>Chuẩn hóa vòng lặp test creative để học nhanh.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo bảng <code>creative_tests</code> với các cột hypothesis, variant, KPI target, result, decision.</li>
-              <li>Tạo rule auto-label: keep / iterate / drop.</li>
-              <li>Tạo AI weekly summary: top winners, top fails, bài học.</li>
+              <li>Tạo bảng <code>creative_tests</code> với cột hypothesis, variant, KPI target, result, decision.</li>
+              <li>Rule auto-label: keep / iterate / drop.</li>
+              <li>Summary tuần: winners, fails, lesson.</li>
             </ol>
-            <p><strong>KPI:</strong> Tăng >= 2x số vòng test/tháng.</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Tháng</th><th>Số test</th><th>Insight</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Trước</td><td>4</td><td>Thiếu log</td></tr>
+                  <tr><td>Sau</td><td>9</td><td>Có rule rõ</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Decision rule:
+- >= target: keep
+- 80-99%: iterate
+- <80%: drop</pre>
+            </div>
+
+            <h4>Artifact</h4>
+            <p>Tracker + weekly debrief.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Tăng ≥ 2x vòng test/tháng.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Không định nghĩa KPI target.</li>
+              <li>Không tổng kết bài học sau test.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="11" /> Đánh dấu đã hoàn thành tuần 11</label>
           </div>
         </details>
 
-        <details class="week">
-          <summary>Tuần 12 - Mini Project 3: Lead Nurture Mini Flow</summary>
-          <div class="week-body">
+        <details class="lesson">
+          <summary><span class="lesson-tag">W12</span> Mini‑project 3: Lead Nurture Mini Flow</summary>
+          <div class="lesson-body">
             <img class="inline-img" src="media/images/lead-nurture-flow.svg" alt="Lead Nurture Flow" />
-            <p><strong>Mục tiêu:</strong> Tạo mini funnel nuôi dưỡng lead có đo lường cơ bản.</p>
+
+            <h4>Goal</h4>
+            <p>Tạo mini funnel nuôi dưỡng lead có đo lường cơ bản.</p>
+
+            <h4>Steps</h4>
             <ol>
-              <li>Tạo source capture lead (form/landing).</li>
-              <li>Segment theo rule cold/warm/hot.</li>
-              <li>Tạo sequence 3 email: welcome, social proof, CTA.</li>
-              <li>Ghi tracker open rate, CTR, step conversion.</li>
-              <li>Retro sau 7 ngày.</li>
+              <li>Capture lead qua form/landing.</li>
+              <li>Segment cold/warm/hot.</li>
+              <li>Sequence 3 email: welcome → proof → CTA.</li>
+              <li>Track open rate, CTR, conversion.</li>
             </ol>
-            <p><strong>KPI:</strong> Có đủ 3 metric email + funnel step.</p>
+
+            <div class="case-card">
+              <h4>Mini‑case + số liệu</h4>
+              <table class="case-table">
+                <thead>
+                  <tr><th>Metric</th><th>Tuần 1</th><th>Tuần 2</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Open rate</td><td>22%</td><td>31%</td></tr>
+                  <tr><td>CTR</td><td>2.1%</td><td>3.4%</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="example-output">
+              <h4>Example Output</h4>
+              <pre>Email 1: Welcome + value
+Email 2: Social proof
+Email 3: CTA action</pre>
+            </div>
+
+            <h4>Artifact</h4>
+            <p>Email sequence + tracker.</p>
+
+            <h4>KPI/Rubric</h4>
+            <p>Có đủ 3 metric email + funnel step.</p>
+
+            <h4>Common Pitfalls</h4>
+            <ul class="pitfalls">
+              <li>Không phân đoạn lead rõ ràng.</li>
+              <li>Không đo CTR theo từng email.</li>
+            </ul>
+
             <label class="week-check"><input type="checkbox" data-week="12" /> Đánh dấu đã hoàn thành tuần 12</label>
           </div>
         </details>
@@ -312,89 +845,46 @@
         </div>
         <div class="project-grid">
           <article class="project-card">
-            <h3>Project 1 - Content Engine Lite</h3>
+            <h3>Content Engine Lite</h3>
             <p><strong>Problem:</strong> Sản xuất nội dung thủ công, thiếu nhất quán.</p>
-            <p><strong>Success metric:</strong> giảm >= 30% thời gian sản xuất.</p>
+            <p><strong>Success metric:</strong> giảm ≥ 30% thời gian sản xuất.</p>
           </article>
           <article class="project-card">
-            <h3>Project 2 - Creative Test Tracker</h3>
+            <h3>Creative Test Tracker</h3>
             <p><strong>Problem:</strong> Test creative thiếu hệ thống, không lưu bài học.</p>
-            <p><strong>Success metric:</strong> tăng >= 2x vòng test/tháng.</p>
+            <p><strong>Success metric:</strong> tăng ≥ 2x vòng test/tháng.</p>
           </article>
           <article class="project-card">
-            <h3>Project 3 - Lead Nurture Mini Flow</h3>
+            <h3>Lead Nurture Mini Flow</h3>
             <p><strong>Problem:</strong> Lead vào nhưng thiếu chuỗi chăm sóc nhất quán.</p>
             <p><strong>Success metric:</strong> theo dõi open rate, CTR, step conversion.</p>
           </article>
         </div>
       </section>
 
-      <section class="section" id="resources" data-nav="resources">
+      <section class="section" id="references">
         <div class="section-head">
-          <p>Videos & Docs</p>
-          <h2>Track học theo video</h2>
+          <p>Optional</p>
+          <h2>References (tùy chọn)</h2>
         </div>
-
         <div class="resource-block">
-          <h3>Mindset (Tuần 1-3)</h3>
           <ul>
-            <li><a href="https://academy.openai.com/public/videos/introduction-to-prompt-engineering-2025-02-13" target="_blank" rel="noreferrer">Introduction to Prompt Engineering</a></li>
-            <li><a href="https://academy.openai.com/public/videos/advanced-prompt-engineering-2025-02-13" target="_blank" rel="noreferrer">Advanced Prompt Engineering</a></li>
-            <li><a href="https://academy.openai.com/public/videos/introduction-to-gpts-2025-02-13" target="_blank" rel="noreferrer">Introduction to GPTs</a></li>
+            <li>OpenAI Prompt Best Practices (ChatGPT + API)</li>
+            <li>Looker Studio tutorials (report + data source)</li>
+            <li>Zapier Zaps quick start guide</li>
+            <li>Make Academy learning paths</li>
           </ul>
-        </div>
-
-        <div class="resource-block">
-          <h3>Skillset (Tuần 4-8)</h3>
-          <ul>
-            <li><a href="https://developers.google.com/workspace/videos" target="_blank" rel="noreferrer">Google Workspace Videos</a></li>
-            <li><a href="https://workspace.google.com/training/" target="_blank" rel="noreferrer">Google Workspace Learning Center</a></li>
-            <li><a href="https://help.openai.com/en/articles/10032626-prompt-engineering-best--practices-for-chatgpt" target="_blank" rel="noreferrer">Prompt Best Practices for ChatGPT</a></li>
-          </ul>
-        </div>
-
-        <div class="resource-block">
-          <h3>Toolset (Tuần 9-12)</h3>
-          <ul>
-            <li><a href="https://academy.make.com/" target="_blank" rel="noreferrer">Make Academy</a></li>
-            <li><a href="https://help.zapier.com/hc/en-us/articles/22234847450893-Zaps-quick-start-guide" target="_blank" rel="noreferrer">Zapier Zaps Quick Start</a></li>
-            <li><a href="https://help.zapier.com/hc/en-us/articles/18590756459277-AI-quick-start-guide-in-Zapier" target="_blank" rel="noreferrer">Zapier AI Quick Start</a></li>
-            <li><a href="https://cloud.google.com/looker/docs/build-skills-with-courses" target="_blank" rel="noreferrer">Looker Studio Courses</a></li>
-          </ul>
-        </div>
-
-        <div class="resource-block">
-          <h3>Mẹo học không quá tải</h3>
-          <ul>
-            <li>Lần 1: xem x2 tốc độ, ghi 3 điểm hành động.</li>
-            <li>Lần 2: vừa xem vừa thao tác trên project thật.</li>
-            <li>Sau mỗi video: cập nhật 1 action vào checklist tuần.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section" id="evaluation">
-        <div class="section-head">
-          <p>Completion</p>
-          <h2>Điều kiện hoàn thành khóa</h2>
-        </div>
-        <div class="lesson-card">
-          <ul>
-            <li>Có 3 mini-project MVP.</li>
-            <li>Mỗi project có >= 2 KPI trước/sau.</li>
-            <li>Có demo script 5 phút/project.</li>
-            <li>Có roadmap nâng cấp 30 ngày.</li>
-          </ul>
+          <p class="muted">Tài liệu tham khảo chỉ để mở rộng kiến thức, không phải điều kiện học chính.</p>
         </div>
       </section>
     </main>
 
     <nav class="bottom-tabs" aria-label="Bottom navigation mobile">
       <a href="#home" data-tab="home">Home</a>
-      <a href="#pillars" data-tab="pillars">3 Trụ</a>
-      <a href="#roadmap" data-tab="roadmap">Roadmap</a>
-      <a href="#lessons" data-tab="lessons">Học</a>
-      <a href="#resources" data-tab="resources">Video</a>
+      <a href="#mindset" data-tab="mindset">Mindset</a>
+      <a href="#skillset" data-tab="skillset">Skillset</a>
+      <a href="#toolset" data-tab="toolset">Toolset</a>
+      <a href="#projects" data-tab="projects">Projects</a>
     </nav>
 
     <script src="./app.js"></script>

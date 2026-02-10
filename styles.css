@@ -32,6 +32,10 @@ a {
   color: #0d5d96;
 }
 
+.muted {
+  color: var(--muted);
+}
+
 .progress-bar {
   position: fixed;
   top: 0;
@@ -119,7 +123,8 @@ main {
 h1,
 h2,
 h3,
-summary {
+summary,
+h4 {
   font-family: "Space Grotesk", sans-serif;
   margin: 0;
 }
@@ -131,6 +136,11 @@ h1 {
 
 h2 {
   font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+h4 {
+  margin-top: 14px;
+  font-size: 1.02rem;
 }
 
 .hero-copy {
@@ -161,7 +171,9 @@ h2 {
 .pillar-card,
 .project-card,
 .resource-block,
-.week {
+.lesson,
+.case-card,
+.example-output {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--card);
@@ -242,6 +254,36 @@ h2 {
   padding: 16px;
 }
 
+.lesson-card ul,
+.lesson-card ol,
+.lesson-body ul,
+.lesson-body ol,
+.resource-block ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  line-height: 1.65;
+}
+
+.pillar-section {
+  border-top: 1px dashed #c7d2e5;
+  padding-top: 10px;
+}
+
+.roadmap-strip {
+  margin-top: 14px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.roadmap-strip span {
+  border: 1px dashed #9cabc2;
+  border-radius: 10px;
+  background: #ffffffd7;
+  padding: 10px;
+  font-size: 0.91rem;
+}
+
 .mindset {
   background: linear-gradient(165deg, #ebf4ff, #ffffff 45%);
 }
@@ -254,7 +296,97 @@ h2 {
   background: linear-gradient(165deg, #fff3e8, #ffffff 45%);
 }
 
-.course-img,
+.lesson {
+  margin-top: 12px;
+  overflow: clip;
+}
+
+.lesson summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 1.02rem;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lesson summary::-webkit-details-marker {
+  display: none;
+}
+
+.lesson[open] summary {
+  border-bottom-color: var(--line);
+  background: #f8fbff;
+}
+
+.lesson summary::after {
+  content: "+";
+  margin-left: auto;
+  color: var(--muted);
+}
+
+.lesson[open] summary::after {
+  content: "-";
+}
+
+.lesson-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #e8faf8;
+  color: #0f766e;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.lesson-body {
+  padding: 14px 16px 16px;
+}
+
+.lesson-body p {
+  margin: 0 0 10px;
+  line-height: 1.65;
+}
+
+.case-card {
+  margin-top: 10px;
+  padding: 12px;
+  background: #fff7ed;
+}
+
+.case-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.95rem;
+}
+
+.case-table th,
+.case-table td {
+  border: 1px solid #e1e7f0;
+  padding: 8px;
+  text-align: left;
+}
+
+.example-output {
+  margin-top: 12px;
+  padding: 12px;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.example-output pre {
+  margin: 6px 0 0;
+  white-space: pre-wrap;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.95rem;
+}
+
 .inline-img {
   width: 100%;
   height: auto;
@@ -262,76 +394,7 @@ h2 {
   border-radius: 12px;
   border: 1px solid var(--line);
   background: #fff;
-}
-
-.course-img {
-  margin-top: 14px;
-}
-
-.roadmap-grid {
-  margin-top: 12px;
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.roadmap-grid span {
-  border: 1px dashed #9cabc2;
-  border-radius: 10px;
-  background: #ffffffd7;
-  padding: 10px;
-  font-size: 0.91rem;
-}
-
-.lesson-card ul,
-.lesson-card ol,
-.week-body ul,
-.week-body ol,
-.resource-block ul {
-  margin: 8px 0 0;
-  padding-left: 18px;
-  line-height: 1.65;
-}
-
-.week {
-  margin-top: 12px;
-  overflow: clip;
-}
-
-.week summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 1.02rem;
-  border-bottom: 1px solid transparent;
-}
-
-.week[open] summary {
-  border-bottom-color: var(--line);
-  background: #f8fbff;
-}
-
-.week summary::-webkit-details-marker {
-  display: none;
-}
-
-.week summary::after {
-  content: "+";
-  float: right;
-  color: var(--muted);
-}
-
-.week[open] summary::after {
-  content: "-";
-}
-
-.week-body {
-  padding: 14px 16px 16px;
-}
-
-.week-body p {
-  margin: 0 0 10px;
-  line-height: 1.65;
+  margin: 10px 0;
 }
 
 .week-check {
@@ -348,8 +411,8 @@ h2 {
   height: 18px;
 }
 
-.resource-block {
-  margin-top: 12px;
+.pitfalls {
+  color: #7f1d1d;
 }
 
 .bottom-tabs {
@@ -417,7 +480,7 @@ h2 {
 
   .pillar-grid,
   .project-grid,
-  .roadmap-grid,
+  .roadmap-strip,
   .hero-stats {
     grid-template-columns: 1fr 1fr;
   }
@@ -449,7 +512,7 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .roadmap-grid {
+  .roadmap-strip {
     grid-auto-flow: column;
     grid-auto-columns: minmax(160px, 68vw);
     grid-template-columns: none;
@@ -458,7 +521,7 @@ h2 {
     padding-bottom: 6px;
   }
 
-  .roadmap-grid span {
+  .roadmap-strip span {
     scroll-snap-align: start;
   }
 
