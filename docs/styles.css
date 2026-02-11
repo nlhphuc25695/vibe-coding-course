@@ -12,6 +12,9 @@
   --radius-sm: 10px;
   --shadow-sm: 0 6px 18px rgba(18, 38, 76, 0.08);
   --shadow-md: 0 16px 32px rgba(18, 38, 76, 0.11);
+  --topbar-offset: 74px;
+  --course-tabs-offset: 58px;
+  --mobile-nav-height: 64px;
 }
 
 * {
@@ -30,7 +33,7 @@ body {
 }
 
 body {
-  padding-bottom: 86px;
+  padding-bottom: 28px;
 }
 
 a {
@@ -182,6 +185,7 @@ a {
   font-size: 0.92rem;
   font-weight: 600;
   border: 1px solid transparent;
+  min-height: 44px;
 }
 
 .site-nav a:hover,
@@ -202,12 +206,12 @@ a {
 .course-page {
   width: min(1160px, 94vw);
   margin: 0 auto;
-  padding: 18px 0 30px;
+  padding: 16px 0 30px;
 }
 
 .section {
   margin-top: 24px;
-  scroll-margin-top: 186px;
+  scroll-margin-top: calc(var(--topbar-offset) + var(--course-tabs-offset) + 20px);
 }
 
 h1,
@@ -268,7 +272,7 @@ h3 {
 
 .course-tabs {
   position: sticky;
-  top: 116px;
+  top: calc(var(--topbar-offset) + 8px);
   z-index: 100;
   margin-top: 14px;
   display: flex;
@@ -280,6 +284,7 @@ h3 {
   background: rgba(251, 253, 255, 0.95);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(8px);
+  -webkit-overflow-scrolling: touch;
 }
 
 .course-shell {
@@ -413,12 +418,13 @@ h3 {
 
 .lesson-mini-head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
 }
 
 .lesson-mini-head h3 {
   margin: 0;
+  line-height: 1.32;
 }
 
 .lesson-tag {
@@ -571,15 +577,20 @@ h3 {
   border-top: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(8px);
+  padding: 6px max(8px, env(safe-area-inset-left, 0px)) calc(6px + env(safe-area-inset-bottom, 0px))
+    max(8px, env(safe-area-inset-right, 0px));
+  gap: 4px;
 }
 
 .bottom-tabs a {
-  min-height: 54px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-size: 0.78rem;
+  border-radius: 10px;
+  white-space: nowrap;
 }
 
 @media (max-width: 1120px) {
@@ -621,7 +632,7 @@ h3 {
     position: absolute;
     left: 3vw;
     right: 3vw;
-    top: 106px;
+    top: calc(var(--topbar-offset) + 6px);
     flex-direction: column;
     gap: 4px;
     padding: 8px;
@@ -636,7 +647,7 @@ h3 {
   }
 
   .course-tabs {
-    top: 156px;
+    top: calc(var(--topbar-offset) + 8px);
     overflow-x: auto;
     flex-wrap: nowrap;
     scrollbar-width: thin;
@@ -645,7 +656,7 @@ h3 {
   .hero,
   .section,
   .lesson-mini-card {
-    scroll-margin-top: 176px;
+    scroll-margin-top: calc(var(--topbar-offset) + var(--course-tabs-offset) + 16px);
   }
 
   .quickstart-grid,
@@ -661,7 +672,7 @@ h3 {
 @media (max-width: 700px) {
   body {
     -webkit-text-size-adjust: 100%;
-    padding-bottom: 82px;
+    padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px) + 16px);
   }
 
   .course-page {
@@ -692,8 +703,9 @@ h3 {
   }
 
   .course-tabs {
-    top: 148px;
+    top: calc(var(--topbar-offset) + 8px);
     margin-top: 12px;
+    padding: 8px;
   }
 
   .course-main > .section {
@@ -716,7 +728,7 @@ h3 {
   }
 
   .lesson-mini-head h3 {
-    font-size: 0.96rem;
+    font-size: 0.94rem;
   }
 
   .lesson-meta-lines {
@@ -734,7 +746,7 @@ h3 {
   }
 
   .section {
-    scroll-margin-top: 162px;
+    scroll-margin-top: calc(var(--topbar-offset) + var(--course-tabs-offset) + 14px);
   }
 
   .bottom-tabs {

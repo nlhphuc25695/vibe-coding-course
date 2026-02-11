@@ -3,6 +3,7 @@ const progressBar = document.getElementById("progressBar");
 const menuToggle = document.getElementById("menuToggle");
 const siteNav = document.getElementById("siteNav");
 const topSearchForm = document.querySelector(".top-search");
+const courseTabs = document.getElementById("courseTabs");
 
 const courseLinks = Array.from(document.querySelectorAll("[data-course-link]"));
 const courseSections = Array.from(document.querySelectorAll("[data-course-section]"));
@@ -47,16 +48,29 @@ function updateScrollProgress() {
   }
 }
 
+function updateLayoutVars() {
+  const root = document.documentElement;
+  const topbarHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 74;
+  root.style.setProperty("--topbar-offset", `${topbarHeight}px`);
+
+  if (courseTabs) {
+    const tabsHeight = Math.ceil(courseTabs.getBoundingClientRect().height);
+    root.style.setProperty("--course-tabs-offset", `${tabsHeight || 58}px`);
+  }
+}
+
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
     menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    requestUIRefresh();
   });
 
   siteNav.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       siteNav.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
+      requestUIRefresh();
     });
   });
 
@@ -66,6 +80,7 @@ if (menuToggle && siteNav) {
     if (!clickedInsideNav && !clickedMenuToggle) {
       siteNav.classList.remove("open");
       menuToggle.setAttribute("aria-expanded", "false");
+      requestUIRefresh();
     }
   });
 }
@@ -128,6 +143,7 @@ function requestUIRefresh() {
   ticking = true;
   requestAnimationFrame(() => {
     ticking = false;
+    updateLayoutVars();
     updateScrollProgress();
     updateActiveStates();
   });
@@ -135,6 +151,8 @@ function requestUIRefresh() {
 
 window.addEventListener("scroll", requestUIRefresh, { passive: true });
 window.addEventListener("resize", requestUIRefresh);
+window.addEventListener("orientationchange", requestUIRefresh);
+updateLayoutVars();
 updateScrollProgress();
 updateActiveStates();
 

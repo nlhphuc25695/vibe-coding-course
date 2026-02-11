@@ -26,6 +26,7 @@ body {
   font-family: "Be Vietnam Pro", sans-serif;
   background: linear-gradient(180deg, #f8fbff 0%, #f2f6fd 70%, #f8fbff 100%);
   line-height: 1.68;
+  overflow-x: hidden;
 }
 
 a {
@@ -35,7 +36,7 @@ a {
 .page {
   width: min(980px, 94vw);
   margin: 0 auto;
-  padding: 18px 0 40px;
+  padding: 16px 0 calc(20px + env(safe-area-inset-bottom, 0px));
 }
 
 .topbar {
@@ -57,7 +58,14 @@ a {
 .nav-links {
   display: flex;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
 }
 
 .nav-links a,
@@ -76,6 +84,8 @@ a {
   font-weight: 600;
   background: #fff;
   color: var(--muted);
+  white-space: nowrap;
+  flex: 0 0 auto;
 }
 
 .nav-links a:hover,
@@ -428,7 +438,8 @@ h1 {
   }
 
   .topbar {
-    position: static;
+    top: max(0px, env(safe-area-inset-top, 0px));
+    padding: 8px 10px;
   }
 
   .deepdive-grid {
@@ -501,6 +512,21 @@ h1 {
 }
 
 @media (max-width: 680px) {
+  .page {
+    width: min(980px, 95vw);
+    padding-top: 10px;
+  }
+
+  .topbar .back-link,
+  .action-link,
+  .progress-btn {
+    min-height: 42px;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
   .hero p,
   .content p,
   .content li,
@@ -558,5 +584,9 @@ h1 {
   .progress-btn {
     width: 100%;
     justify-content: flex-start;
+  }
+
+  .footer-nav a {
+    width: 100%;
   }
 }
