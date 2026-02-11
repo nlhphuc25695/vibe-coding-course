@@ -6,7 +6,7 @@ const siteNav = document.getElementById("siteNav");
 const navLinks = Array.from(document.querySelectorAll("[data-nav]"));
 const bottomTabs = Array.from(document.querySelectorAll("[data-tab]"));
 
-const weekChecks = Array.from(document.querySelectorAll("[data-week]"));
+const progressChecks = Array.from(document.querySelectorAll('input[type="checkbox"][data-week], input[type="checkbox"][data-progress-key]'));
 const progressCountNodes = Array.from(document.querySelectorAll("[data-progress-count]"));
 const progressBars = Array.from(document.querySelectorAll("[data-progress-bar]"));
 const continueButtons = Array.from(document.querySelectorAll("[data-continue-week]"));
@@ -21,8 +21,19 @@ const lessons = Array.from(document.querySelectorAll("[data-lesson]"));
 const redirectNotice = document.getElementById("redirectNotice");
 const page = document.body.dataset.page || "";
 
-const TOTAL_WEEKS = 12;
 const STORAGE_KEY = "vibe-course-progress";
+const FOUNDATION_ITEMS = [
+  { key: "foundation.f1", label: "Foundation 1", href: "./foundation/f1.html" },
+  { key: "foundation.f2", label: "Foundation 2", href: "./foundation/f2.html" },
+  { key: "foundation.f3", label: "Foundation 3", href: "./foundation/f3.html" },
+  { key: "foundation.f4", label: "Foundation 4", href: "./foundation/f4.html" },
+];
+const MODULE_ITEMS = Array.from({ length: 12 }, (_, index) => {
+  const week = index + 1;
+  return { key: `modules.w${week}`, label: `Tuần ${week}`, href: `./modules/w${week}.html` };
+});
+const PROGRESS_ITEMS = [...FOUNDATION_ITEMS, ...MODULE_ITEMS];
+const TOTAL_ITEMS = PROGRESS_ITEMS.length;
 
 function normalizeText(value) {
   return value
@@ -63,73 +74,100 @@ function setActiveNavigation() {
   });
 }
 
+function createEmptyProgress() {
+  const progress = {};
+  PROGRESS_ITEMS.forEach((item) => {
+    progress[item.key] = false;
+  });
+  return progress;
+}
+
+function normalizeProgress(rawData) {
+  const normalized = createEmptyProgress();
+  if (!rawData || typeof rawData !== "object") {
+    return normalized;
+  }
+
+  PROGRESS_ITEMS.forEach((item) => {
+    if (Object.prototype.hasOwnProperty.call(rawData, item.key)) {
+      normalized[item.key] = Boolean(rawData[item.key]);
+    }
+  });
+
+  for (let week = 1; week <= 12; week += 1) {
+    const legacyKey = String(week);
+    if (Object.prototype.hasOwnProperty.call(rawData, legacyKey)) {
+      normalized[`modules.w${week}`] = Boolean(rawData[legacyKey]);
+    }
+  }
+
+  return normalized;
+}
+
+function getProgressKey(element) {
+  if (!element) return "";
+  if (element.dataset.progressKey) return element.dataset.progressKey;
+  if (element.dataset.week) return `modules.w${element.dataset.week}`;
+  return "";
+}
+
 function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     const parsed = raw ? JSON.parse(raw) : {};
-    const normalized = {};
-    for (let i = 1; i <= TOTAL_WEEKS; i += 1) {
-      normalized[String(i)] = Boolean(parsed[String(i)]);
-    }
-    return normalized;
+    return normalizeProgress(parsed);
   } catch {
-    const fallback = {};
-    for (let i = 1; i <= TOTAL_WEEKS; i += 1) {
-      fallback[String(i)] = false;
-    }
-    return fallback;
+    return createEmptyProgress();
   }
 }
 
 function saveProgress(data) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(normalizeProgress(data)));
   } catch {
     // ignore storage failures
   }
 }
 
-function getFirstIncompleteWeek(progressData) {
-  for (let i = 1; i <= TOTAL_WEEKS; i += 1) {
-    if (!progressData[String(i)]) return i;
+function getFirstIncompleteItem(progressData) {
+  for (const item of PROGRESS_ITEMS) {
+    if (!progressData[item.key]) return item;
   }
   return null;
 }
 
 function updateProgressUI() {
   const progressData = loadProgress();
-  let completed = 0;
-
-  for (let i = 1; i <= TOTAL_WEEKS; i += 1) {
-    if (progressData[String(i)]) completed += 1;
-  }
+  const completed = PROGRESS_ITEMS.reduce((sum, item) => sum + (progressData[item.key] ? 1 : 0), 0);
 
   progressCountNodes.forEach((node) => {
-    node.textContent = `${completed}/${TOTAL_WEEKS}`;
+    node.textContent = `${completed}/${TOTAL_ITEMS}`;
   });
 
-  const percent = (completed / TOTAL_WEEKS) * 100;
+  const percent = (completed / TOTAL_ITEMS) * 100;
   progressBars.forEach((bar) => {
     bar.style.width = `${percent}%`;
   });
 
-  const nextWeek = getFirstIncompleteWeek(progressData);
+  const nextItem = getFirstIncompleteItem(progressData);
   continueButtons.forEach((button) => {
-    if (!nextWeek) {
+    if (!nextItem) {
       button.textContent = "Đã hoàn thành - Xem dự án";
       button.setAttribute("href", "./projects.html");
       return;
     }
 
-    button.textContent = `Tiếp tục: Tuần ${nextWeek}`;
-    button.setAttribute("href", `./modules/w${nextWeek}.html`);
+    button.textContent = `Tiếp tục: ${nextItem.label}`;
+    button.setAttribute("href", nextItem.href);
   });
 }
 
-if (weekChecks.length) {
+if (progressChecks.length) {
   const saved = loadProgress();
-  weekChecks.forEach((check) => {
-    const key = check.dataset.week;
+  progressChecks.forEach((check) => {
+    const key = getProgressKey(check);
+    if (!key) return;
+
     check.checked = Boolean(saved[key]);
 
     check.addEventListener("change", () => {
@@ -144,12 +182,9 @@ if (weekChecks.length) {
 if (resetButtons.length) {
   resetButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      const cleared = {};
-      for (let i = 1; i <= TOTAL_WEEKS; i += 1) {
-        cleared[String(i)] = false;
-      }
+      const cleared = createEmptyProgress();
       saveProgress(cleared);
-      weekChecks.forEach((check) => {
+      progressChecks.forEach((check) => {
         check.checked = false;
       });
       updateProgressUI();
@@ -235,6 +270,7 @@ function handleLegacyAnchorRedirect() {
     overview: "./overview.html",
     outcomes: "./outcomes.html",
     modules: "./modules.html",
+    foundation: "./modules.html#foundation",
     projects: "./projects.html",
     references: "./references.html",
   };

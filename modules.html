@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module - Vibe Marketing Lab</title>
-    <meta name="description" content="Danh sách 12 module theo tuần, có tìm kiếm và theo dõi tiến độ học." />
+    <meta name="description" content="Danh sách 16 module gồm Foundation F1-F4 và Vibe Marketing W1-W12, có tìm kiếm và theo dõi tiến độ học." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&v=20260211e"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=20260211e" />
+    <link rel="stylesheet" href="./styles.css?v=20260212a" />
   </head>
   <body data-page="modules">
     <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
@@ -22,19 +22,21 @@
       <nav id="siteNav" class="site-nav" aria-label="Điều hướng chính">
         <a href="./overview.html" data-nav="overview">Tổng quan</a>
         <a href="./outcomes.html" data-nav="outcomes">Kết quả</a>
+        <a href="./foundation/f1.html" data-nav="foundation">Foundation</a>
         <a href="./modules.html" data-nav="modules">Module</a>
         <a href="./projects.html" data-nav="projects">Dự án</a>
         <a href="./references.html" data-nav="references">Tham khảo</a>
       </nav>
-      <a class="top-cta" href="./modules/w1.html">Học Tuần 1</a>
+      <a class="top-cta" href="./foundation/f1.html">Bắt đầu Foundation</a>
     </header>
 
     <main class="page-wrap page-modules">
       <section class="hero-card">
         <p class="eyebrow">Trang học chính</p>
-        <h1>Module 12 tuần theo 3 trụ</h1>
-        <p>Chọn đúng tuần cần học, đánh dấu hoàn thành và mở bài dài chi tiết để thực hành.</p>
+        <h1>Module 16 tuần: Foundation + 3 trụ Vibe Marketing</h1>
+        <p>Bắt đầu với Foundation F1-F4 để nắm nền tảng kỹ thuật, sau đó học W1-W12 theo Mindset, Skillset và Toolset.</p>
         <div class="hero-actions">
+          <a class="btn-ghost" href="#foundation">Foundation</a>
           <a class="btn-ghost" href="#mindset">Tư duy</a>
           <a class="btn-ghost" href="#skillset">Kỹ năng</a>
           <a class="btn-ghost" href="#toolset">Công cụ</a>
@@ -58,6 +60,42 @@
             </div>
           </section>
 
+          <section class="section-card module-group" id="foundation">
+            <div class="section-head">
+              <p>Phase A</p>
+              <h2>Foundation (F1-F4)</h2>
+            </div>
+            <div class="lesson-mini-grid">
+              <article class="lesson-mini-card" id="f1" data-lesson>
+                <div class="lesson-mini-head"><span class="lesson-tag">F1</span><h3>Coding Basics for Marketers</h3></div>
+                <p>Hiểu coding theo ngữ cảnh business với biến, hàm, điều kiện, vòng lặp và input/output.</p>
+                <ul class="lesson-meta-lines"><li>Thời lượng: ~35 phút</li><li>Sản phẩm: Script Map</li><li>Hành động: Giải thích 1 script Python</li></ul>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./foundation/f1.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-progress-key="foundation.f1" /> Hoàn thành</label></div>
+              </article>
+
+              <article class="lesson-mini-card" id="f2" data-lesson>
+                <div class="lesson-mini-head"><span class="lesson-tag">F2</span><h3>IDE, CLI, Git Workflow</h3></div>
+                <p>Thao tác VS Code, terminal và Git để tham gia workflow team dev-lite.</p>
+                <ul class="lesson-meta-lines"><li>Thời lượng: ~35 phút</li><li>Sản phẩm: Repo + commit log</li><li>Hành động: Chạy script bằng CLI</li></ul>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./foundation/f2.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-progress-key="foundation.f2" /> Hoàn thành</label></div>
+              </article>
+
+              <article class="lesson-mini-card" id="f3" data-lesson>
+                <div class="lesson-mini-head"><span class="lesson-tag">F3</span><h3>Read Code + Debug for Non-Coder</h3></div>
+                <p>Đọc file tree, trace function và sửa lỗi beginner bằng AI pair workflow.</p>
+                <ul class="lesson-meta-lines"><li>Thời lượng: ~35 phút</li><li>Sản phẩm: Bug Triage Sheet</li><li>Hành động: Sửa ít nhất 2 lỗi</li></ul>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./foundation/f3.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-progress-key="foundation.f3" /> Hoàn thành</label></div>
+              </article>
+
+              <article class="lesson-mini-card" id="f4" data-lesson>
+                <div class="lesson-mini-head"><span class="lesson-tag">F4</span><h3>Team Coding Delivery Lifecycle</h3></div>
+                <p>Hiểu flow Issue -> Branch -> PR -> Review -> Deploy -> Rollback trong delivery cycle.</p>
+                <ul class="lesson-meta-lines"><li>Thời lượng: ~35 phút</li><li>Sản phẩm: Delivery Playbook</li><li>Hành động: Mô phỏng 1 vòng delivery</li></ul>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./foundation/f4.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-progress-key="foundation.f4" /> Hoàn thành</label></div>
+              </article>
+            </div>
+          </section>
+
           <section class="section-card module-group" id="mindset">
             <div class="section-head">
               <p>Trụ 1</p>
@@ -68,21 +106,21 @@
                 <div class="lesson-mini-head"><span class="lesson-tag">W1</span><h3>Tư duy hệ thống marketing</h3></div>
                 <p>Nhìn marketing như quy trình có đầu vào, xử lý, đầu ra và phản hồi.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~18 phút</li><li>Sản phẩm: Bản đồ luồng</li><li>Hành động: Lập danh sách điểm nghẽn</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w1.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="1" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w1.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="1" data-progress-key="modules.w1" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w2" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W2</span><h3>Tư duy kiểm thử nhanh</h3></div>
                 <p>Ra quyết định bằng giả thuyết có KPI thay vì cảm tính.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~20 phút</li><li>Sản phẩm: Backlog giả thuyết</li><li>Hành động: Chọn 3 kiểm thử ưu tiên</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w2.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="2" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w2.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="2" data-progress-key="modules.w2" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w3" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W3</span><h3>Ranh giới người và AI</h3></div>
                 <p>Phân vai rõ để giảm việc lặp lại mà vẫn giữ chuẩn thương hiệu.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~18 phút</li><li>Sản phẩm: Ma trận phân vai</li><li>Hành động: Chốt 3 tác vụ tự động hóa</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w3.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="3" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w3.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="3" data-progress-key="modules.w3" /> Hoàn thành</label></div>
               </article>
             </div>
           </section>
@@ -97,35 +135,35 @@
                 <div class="lesson-mini-head"><span class="lesson-tag">W4</span><h3>Phân rã bài toán thành brief</h3></div>
                 <p>Chuẩn hóa yêu cầu mơ hồ thành brief có thể giao việc và đo kết quả.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~22 phút</li><li>Sản phẩm: 3 brief chuẩn</li><li>Hành động: Chuẩn hóa 3 tác vụ thật</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w4.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="4" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w4.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="4" data-progress-key="modules.w4" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w5" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W5</span><h3>Thiết kế prompt thực dụng</h3></div>
                 <p>Xây thư viện prompt có cấu trúc để tăng tính ổn định đầu ra.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~20 phút</li><li>Sản phẩm: Thư viện prompt</li><li>Hành động: Tạo 20 prompt theo nhóm</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w5.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="5" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w5.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="5" data-progress-key="modules.w5" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w6" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W6</span><h3>Vòng QA cho đầu ra AI</h3></div>
                 <p>Dùng checklist QA để giảm lỗi nội dung, logic và giọng thương hiệu.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~19 phút</li><li>Sản phẩm: Checklist QA</li><li>Hành động: Kiểm tra 5 mẫu nội dung</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w6.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="6" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w6.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="6" data-progress-key="modules.w6" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w7" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W7</span><h3>Đo lường mốc nền và chênh lệch</h3></div>
                 <p>Chứng minh tác động trước/sau bằng hệ KPI tối giản nhưng hiệu quả.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~18 phút</li><li>Sản phẩm: Dashboard KPI</li><li>Hành động: Cập nhật baseline</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w7.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="7" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w7.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="7" data-progress-key="modules.w7" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w8" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W8</span><h3>Tổng kết tuần và cải tiến</h3></div>
                 <p>Duy trì vòng lặp cải tiến để quy trình không quay lại trạng thái cũ.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~17 phút</li><li>Sản phẩm: Biên bản tổng kết</li><li>Hành động: Chốt 2 cải tiến đo được</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w8.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="8" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w8.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="8" data-progress-key="modules.w8" /> Hoàn thành</label></div>
               </article>
             </div>
           </section>
@@ -140,28 +178,28 @@
                 <div class="lesson-mini-head"><span class="lesson-tag">W9</span><h3>Bộ công cụ tối thiểu</h3></div>
                 <p>Dựng stack cơ bản để luồng marketing có AI chạy ổn định.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~20 phút</li><li>Sản phẩm: Sơ đồ stack</li><li>Hành động: Kết nối 1 pipeline nội dung</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w9.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="9" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w9.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="9" data-progress-key="modules.w9" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w10" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W10</span><h3>Dự án mini 1: Cỗ máy nội dung</h3></div>
                 <p>Tạo luồng từ brief đến lịch đăng để giảm thời gian sản xuất nội dung.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~25 phút</li><li>Sản phẩm: Pipeline nội dung</li><li>Hành động: Theo dõi giảm từ 30% thời gian</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w10.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="10" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w10.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="10" data-progress-key="modules.w10" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w11" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W11</span><h3>Dự án mini 2: Theo dõi kiểm thử</h3></div>
                 <p>Chuẩn hóa vòng kiểm thử để tăng số vòng thử và giữ bài học.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~24 phút</li><li>Sản phẩm: Bảng theo dõi kiểm thử</li><li>Hành động: Tăng từ 2 lần số vòng thử</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w11.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="11" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w11.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="11" data-progress-key="modules.w11" /> Hoàn thành</label></div>
               </article>
 
               <article class="lesson-mini-card" id="w12" data-lesson>
                 <div class="lesson-mini-head"><span class="lesson-tag">W12</span><h3>Dự án mini 3: Nuôi dưỡng khách hàng tiềm năng</h3></div>
                 <p>Thiết lập phễu nuôi dưỡng nhỏ có theo dõi tỷ lệ mở, CTR, chuyển bước.</p>
                 <ul class="lesson-meta-lines"><li>Thời lượng: ~24 phút</li><li>Sản phẩm: Chuỗi chăm sóc 3 bước</li><li>Hành động: Theo dõi tỷ lệ chuyển bước</li></ul>
-                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w12.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="12" /> Hoàn thành</label></div>
+                <div class="lesson-mini-actions"><a class="btn-ghost" href="./modules/w12.html">Mở bài dài</a><label class="week-check"><input type="checkbox" data-week="12" data-progress-key="modules.w12" /> Hoàn thành</label></div>
               </article>
             </div>
           </section>
@@ -170,9 +208,9 @@
         <aside class="page-sidebar">
           <section class="section-card sidebar-card">
             <p class="eyebrow">Tiến độ học</p>
-            <h3><span data-progress-count>0/12</span> tuần</h3>
+            <h3><span data-progress-count>0/16</span> module</h3>
             <div class="progress-track"><div class="progress-fill" data-progress-bar></div></div>
-            <a class="btn-primary full" data-continue-week href="./modules/w1.html">Tiếp tục học</a>
+            <a class="btn-primary full" data-continue-week href="./foundation/f1.html">Tiếp tục học</a>
             <button class="progress-reset" data-reset-progress>Đặt lại tiến độ</button>
           </section>
 
@@ -196,6 +234,6 @@
       <a href="./references.html" data-tab="references">Tham khảo</a>
     </nav>
 
-    <script src="./app.js"></script>
+    <script src="./app.js?v=20260212a"></script>
   </body>
 </html>

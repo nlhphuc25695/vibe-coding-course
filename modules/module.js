@@ -1,4 +1,7 @@
 const STORAGE_KEY = "vibe-course-progress";
+const FOUNDATION_KEYS = ["foundation.f1", "foundation.f2", "foundation.f3", "foundation.f4"];
+const MODULE_KEYS = Array.from({ length: 12 }, (_, index) => `modules.w${index + 1}`);
+const PROGRESS_KEYS = [...FOUNDATION_KEYS, ...MODULE_KEYS];
 
 const DEEP_DIVE_BY_WEEK = {
   1: {
@@ -211,18 +214,49 @@ const FLOW_BY_WEEK = {
 function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? JSON.parse(raw) : {};
+    const parsed = raw ? JSON.parse(raw) : {};
+    return normalizeProgress(parsed);
   } catch {
-    return {};
+    return createEmptyProgress();
   }
 }
 
 function saveProgress(data) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(normalizeProgress(data)));
   } catch {
     // ignore
   }
+}
+
+function createEmptyProgress() {
+  const progress = {};
+  PROGRESS_KEYS.forEach((key) => {
+    progress[key] = false;
+  });
+  return progress;
+}
+
+function normalizeProgress(rawData) {
+  const normalized = createEmptyProgress();
+  if (!rawData || typeof rawData !== "object") {
+    return normalized;
+  }
+
+  PROGRESS_KEYS.forEach((key) => {
+    if (Object.prototype.hasOwnProperty.call(rawData, key)) {
+      normalized[key] = Boolean(rawData[key]);
+    }
+  });
+
+  for (let week = 1; week <= 12; week += 1) {
+    const legacyKey = String(week);
+    if (Object.prototype.hasOwnProperty.call(rawData, legacyKey)) {
+      normalized[`modules.w${week}`] = Boolean(rawData[legacyKey]);
+    }
+  }
+
+  return normalized;
 }
 
 function buildList(items) {
@@ -311,11 +345,12 @@ function injectDeepDive(week) {
   anchor.parentElement.insertBefore(section, anchor);
 }
 
-const weekCheck = document.querySelector("[data-week]");
+const progressCheck = document.querySelector('input[type="checkbox"][data-progress-key], input[type="checkbox"][data-week]');
 const jumpButton = document.getElementById("jumpToWeek");
 const statusChip = document.getElementById("doneChip");
 const statusText = document.getElementById("statusText");
-const activeWeek = Number(weekCheck?.dataset.week || "0");
+const progressKey = progressCheck?.dataset.progressKey || (progressCheck?.dataset.week ? `modules.w${progressCheck.dataset.week}` : "");
+const activeWeek = Number(progressCheck?.dataset.week || "0");
 
 if (activeWeek > 0) {
   injectFlow(activeWeek);
@@ -326,30 +361,32 @@ function updateStatus(checked) {
   if (!statusChip || !statusText) return;
   if (checked) {
     statusChip.hidden = false;
-    statusText.textContent = "Tuần này đã đánh dấu hoàn thành";
+    statusText.textContent = "Module này đã đánh dấu hoàn thành";
   } else {
     statusChip.hidden = true;
-    statusText.textContent = "Tuần này chưa hoàn thành";
+    statusText.textContent = "Module này chưa hoàn thành";
   }
 }
 
-if (weekCheck) {
-  const week = weekCheck.dataset.week;
+if (progressCheck && progressKey) {
   const saved = loadProgress();
-  weekCheck.checked = Boolean(saved[week]);
-  updateStatus(weekCheck.checked);
+  progressCheck.checked = Boolean(saved[progressKey]);
+  updateStatus(progressCheck.checked);
 
-  weekCheck.addEventListener("change", () => {
+  progressCheck.addEventListener("change", () => {
     const updated = loadProgress();
-    updated[week] = weekCheck.checked;
+    updated[progressKey] = progressCheck.checked;
     saveProgress(updated);
-    updateStatus(weekCheck.checked);
+    updateStatus(progressCheck.checked);
   });
 }
 
-if (jumpButton && weekCheck) {
+if (jumpButton && progressCheck) {
   jumpButton.addEventListener("click", () => {
-    const week = Number(weekCheck.dataset.week || "1");
-    window.location.href = `../modules.html#w${week}`;
+    const jumpTarget =
+      progressCheck.dataset.jumpTarget ||
+      jumpButton.dataset.jumpTarget ||
+      (progressCheck.dataset.week ? `../modules.html#w${progressCheck.dataset.week}` : "../modules.html#foundation");
+    window.location.href = jumpTarget;
   });
 }

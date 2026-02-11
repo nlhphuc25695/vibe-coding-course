@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F3 - Read Code + Debug for Non-Coder | Vibe Marketing Lab</title>
+    <meta name="description" content="Foundation F3: đọc code theo luồng logic, hiểu lỗi và sửa lỗi mức cơ bản bằng AI pair workflow." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&v=20260211e" rel="stylesheet" />
+    <link rel="stylesheet" href="../modules/module.css?v=20260211e" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../modules.html#foundation">← Quay lại danh sách Foundation</a>
+        <nav class="nav-links" aria-label="Điều hướng Foundation">
+          <a href="./f2.html">Foundation 2</a>
+          <a href="../modules.html#foundation">Bản rút gọn</a>
+          <a href="./f4.html">Foundation 4</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Foundation • F3 • 35 phút đọc</p>
+        <h1>Read Code + Debug for Non-Coder</h1>
+        <p>Đọc code theo flow dữ liệu và xử lý lỗi theo quy trình rõ ràng để không "sửa mò" khi automation bị hỏng.</p>
+        <div class="meta">
+          <span>Mức độ: Nền tảng kỹ thuật</span>
+          <span>Đọc + thực hành: 35 phút đọc</span>
+          <span>Đầu ra: Bug Triage Sheet</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Business Situation</h2>
+            <figure class="figure">
+              <img src="../media/images/foundation/f3.svg" alt="Foundation F3 read code and debug" />
+              <figcaption>Marketer non-coder cần biết phân loại lỗi và mô tả lỗi tốt để AI hoặc team sửa nhanh đúng trọng tâm.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Concepts You Need</h2>
+            <ul>
+              <li><strong>File tree:</strong> biết file nào chứa logic chính, file nào chỉ là config.</li>
+              <li><strong>Trace function:</strong> theo dấu dòng dữ liệu đi qua các hàm.</li>
+              <li><strong>Error message:</strong> đọc đúng loại lỗi (syntax, type, key, network...).</li>
+              <li><strong>Reproduce steps:</strong> tái tạo lỗi ổn định trước khi sửa.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>How Team Does This in Real Life</h2>
+            <ul>
+              <li>Người phát hiện lỗi ghi rõ thời điểm, dữ liệu đầu vào, kết quả sai.</li>
+              <li>Ops/engineer tái hiện lỗi trong môi trường local.</li>
+              <li>AI pair hỗ trợ gợi ý patch tối thiểu và kiểm tra tác động phụ.</li>
+              <li>Reviewer xác nhận fix và cập nhật runbook lỗi để tránh lặp lại.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Step-by-Step Workflow</h2>
+            <ol>
+              <li>Chụp lại lỗi gốc và command đã chạy.</li>
+              <li>Khoanh vùng file/hàm liên quan theo traceback hoặc log.</li>
+              <li>Viết expected output để biết thế nào là fix đúng.</li>
+              <li>Áp dụng patch nhỏ nhất có thể.</li>
+              <li>Chạy lại test/input cũ để xác nhận lỗi biến mất.</li>
+              <li>Log quyết định fix vào Bug Triage Sheet.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Mini Case + Numbers</h2>
+            <table>
+              <thead>
+                <tr><th>Lỗi</th><th>Thời gian xử lý trước</th><th>Thời gian xử lý sau (theo workflow)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Thiếu cột dữ liệu</td><td>42 phút</td><td>15 phút</td></tr>
+                <tr><td>Sai format ngày tháng</td><td>35 phút</td><td>12 phút</td></tr>
+                <tr><td>Lỗi chia cho 0</td><td>28 phút</td><td>9 phút</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> quy trình debug chuẩn + prompt rõ ràng giúp giảm đáng kể thời gian sửa lỗi và giảm patch sai.</p>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Hands-on Task (45-90 phút)</h2>
+            <ul>
+              <li>Lấy 3 lỗi beginner từ bộ bài tập và tái tạo từng lỗi.</li>
+              <li>Điền đầy đủ cột trong Bug Triage Sheet: symptom, root cause, fix, verify.</li>
+              <li>Fix ít nhất 2 lỗi và ghi bằng chứng output sau fix.</li>
+            </ul>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Artifact to Submit</h2>
+            <ul>
+              <li>Bug Triage Sheet hoàn chỉnh cho 3 lỗi.</li>
+              <li>Patch note ngắn cho từng lỗi đã sửa.</li>
+              <li>Ảnh hoặc log xác minh trước/sau fix.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>KPI / Completion Rubric</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Tiêu chí</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Chưa reproduce được lỗi.</td></tr>
+                <tr><td>Mức 1</td><td>Reproduce được nhưng chưa khoanh vùng root cause.</td></tr>
+                <tr><td>Mức 2</td><td>Fix được >= 2 lỗi beginner và verify đúng.</td></tr>
+                <tr><td>Mức 3</td><td>Fix ổn định + có triage note rõ để team tái sử dụng.</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Common Failure Patterns</h2>
+            <ul>
+              <li>Sửa nhiều nơi cùng lúc nên không biết fix nào hiệu quả.</li>
+              <li>Không giữ input mẫu gây lỗi nên không verify được.</li>
+              <li>Nhờ AI sửa nhưng không đưa log/context nên gợi ý sai hướng.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Prompt Pack</h2>
+            <p><strong>Build prompt:</strong> "Tạo checklist debug cho script xử lý dữ liệu marketing: reproduce -> isolate -> patch -> verify".</p>
+            <p><strong>Debug prompt:</strong> "Đây là traceback, file liên quan và output kỳ vọng. Hãy đề xuất patch nhỏ nhất và giải thích vì sao đúng".</p>
+            <p><strong>Review prompt:</strong> "Review patch này, nêu rủi ro regression và đề xuất test nhanh cần chạy".</p>
+          </section>
+
+          <section class="block">
+            <h2>Tooling Notes (IDE/CLI/tool pros-cons)</h2>
+            <ul>
+              <li><strong>Terminal logs:</strong> cho ngữ cảnh lỗi rõ, nhưng cần lưu lại để so sánh trước/sau.</li>
+              <li><strong>Search trong IDE:</strong> truy vết biến/hàm nhanh, nhưng dễ nhiễu nếu project chưa có naming nhất quán.</li>
+              <li><strong>Codex pair:</strong> mạnh khi có đầy đủ error context và expected behavior.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Optional Upgrade (low-code path)</h2>
+            <ul>
+              <li>Thêm assert/check guard cho input trước khi xử lý.</li>
+              <li>Viết test nhỏ cho 1 hàm quan trọng để tránh lỗi quay lại.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Module này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành Foundation 3</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-progress-key="foundation.f3" data-jump-target="../modules.html#foundation" /> Đánh dấu hoàn thành Foundation 3</label>
+              <button class="progress-btn" id="jumpToWeek" type="button" data-jump-target="../modules.html#foundation">Đồng bộ về trang tổng</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./f2.html">← Foundation 2</a>
+              <a class="action-link" href="../modules.html#foundation">Mở danh sách Foundation</a>
+              <a class="action-link" href="./f4.html">Foundation 4 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Module: Foundation 3</li>
+              <li>Thời lượng: 35 phút đọc</li>
+              <li>Artifact: Bug Triage Sheet</li>
+              <li>KPI: fix >=2 lỗi beginner bằng AI pair workflow.</li>
+            </ul>
+          </section>
+          <section class="block">
+            <h3>Checklist hoàn thành</h3>
+            <ul>
+              <li>Reproduce được cả 3 lỗi.</li>
+              <li>Khoanh vùng được root cause.</li>
+              <li>Verify output sau fix không còn lỗi.</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="../modules/module.js?v=20260212a"></script>
+  </body>
+</html>

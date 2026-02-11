@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 - Coding Basics for Marketers | Vibe Marketing Lab</title>
+    <meta
+      name="description"
+      content="Foundation F1: Coding Basics for Marketers. Hiểu biến, hàm, điều kiện, vòng lặp và input/output theo ngữ cảnh business marketing."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&v=20260211e" rel="stylesheet" />
+    <link rel="stylesheet" href="../modules/module.css?v=20260211e" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../modules.html#foundation">← Quay lại danh sách Foundation</a>
+        <nav class="nav-links" aria-label="Điều hướng Foundation">
+          <a href="../modules.html#foundation">Bản rút gọn</a>
+          <a href="./f2.html">Foundation 2</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Foundation • F1 • 35 phút đọc</p>
+        <h1>Coding Basics for Marketers</h1>
+        <p>Hiểu coding bằng ngôn ngữ business: dữ liệu vào, xử lý, dữ liệu ra, KPI tác động. Không học hàn lâm, chỉ học thứ dùng được trong marketing ops.</p>
+        <div class="meta">
+          <span>Mức độ: Nền tảng kỹ thuật</span>
+          <span>Đọc + thực hành: 35 phút đọc</span>
+          <span>Đầu ra: Script map + giải thích flow</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Business Situation</h2>
+            <figure class="figure">
+              <img src="../media/images/foundation/f1.svg" alt="Foundation F1 coding basics" />
+              <figcaption>Khi marketer hiểu luồng dữ liệu và logic cơ bản, việc làm việc với AI/automation sẽ nhanh và ít lỗi hơn.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Concepts You Need</h2>
+            <ul>
+              <li><strong>Biến:</strong> giữ giá trị (ví dụ ngân sách, số lead, CTR).</li>
+              <li><strong>Hàm:</strong> gói một tác vụ lặp (ví dụ chuẩn hóa headline).</li>
+              <li><strong>Điều kiện:</strong> rẽ nhánh theo ngưỡng KPI (nếu CTR &lt; 1.5% thì cần tối ưu).</li>
+              <li><strong>Vòng lặp:</strong> chạy cùng một xử lý cho nhiều dòng dữ liệu.</li>
+              <li><strong>Input/Output:</strong> dữ liệu từ sheet/API đi vào script và xuất ra dashboard hoặc file.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>How Team Does This in Real Life</h2>
+            <ul>
+              <li>Performance marketer định nghĩa input cần xử lý: campaign name, spend, clicks, leads.</li>
+              <li>Ops hoặc người phụ trách automation viết script chuẩn hóa dữ liệu và gắn rule kiểm tra.</li>
+              <li>Data owner kiểm tra output và cập nhật dashboard tuần.</li>
+              <li>Mọi thay đổi logic đều phải ghi vào changelog để tránh lệch cách tính KPI.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Step-by-Step Workflow</h2>
+            <ol>
+              <li>Xác định câu hỏi business: script này để trả lời KPI nào.</li>
+              <li>Liệt kê input bắt buộc và format chuẩn.</li>
+              <li>Chia logic thành từng hàm nhỏ: validate -> transform -> aggregate.</li>
+              <li>Tạo output rõ ràng: file CSV, tab report hoặc bảng tổng hợp.</li>
+              <li>Chạy test với 10 dòng dữ liệu thật và 3 dòng dữ liệu lỗi.</li>
+              <li>So sánh kết quả script với số liệu tính tay trước khi dùng chính thức.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Mini Case + Numbers</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>Tình huống</th>
+                  <th>Trước khi hiểu coding basics</th>
+                  <th>Sau khi áp dụng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chuẩn hóa UTM report</td>
+                  <td>95 phút/tuần thủ công</td>
+                  <td>28 phút/tuần với script</td>
+                </tr>
+                <tr>
+                  <td>Kiểm tra dữ liệu lỗi</td>
+                  <td>Bỏ sót ~12% dòng lỗi</td>
+                  <td>Bỏ sót &lt; 2% nhờ validate rule</td>
+                </tr>
+                <tr>
+                  <td>Báo cáo weekly KPI</td>
+                  <td>Trễ deadline 2/4 tuần</td>
+                  <td>Đúng hạn 4/4 tuần</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> chỉ cần nắm logic coding cơ bản, marketer có thể giảm lỗi dữ liệu và rút ngắn thời gian reporting đáng kể.</p>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Hands-on Task (45-90 phút)</h2>
+            <ul>
+              <li>Mở một script Python ngắn 40-60 dòng (file mẫu trong repo học tập).</li>
+              <li>Đánh dấu từng phần: input, xử lý, output, chỗ kiểm tra lỗi.</li>
+              <li>Viết lại bằng lời business: script này giải quyết vấn đề gì cho team marketing.</li>
+              <li>Thay đổi 1 rule nhỏ (ví dụ ngưỡng CTR) và chạy lại để xem output khác gì.</li>
+            </ul>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Artifact to Submit</h2>
+            <ul>
+              <li>Marketing Automation Script Map (flow nhập -> xử lý -> xuất).</li>
+              <li>File ghi chú giải thích từng hàm bằng ngôn ngữ business.</li>
+              <li>1 ảnh chụp màn hình output trước/sau khi đổi rule.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>KPI / Completion Rubric</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Tiêu chí</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Chưa phân biệt được input, process, output.</td></tr>
+                <tr><td>Mức 1</td><td>Đọc được flow nhưng chưa giải thích đúng mục tiêu business.</td></tr>
+                <tr><td>Mức 2</td><td>Giải thích được script và chỉ ra điểm kiểm soát lỗi.</td></tr>
+                <tr><td>Mức 3</td><td>Sửa được 1 rule nhỏ và diễn giải được tác động lên KPI.</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Common Failure Patterns</h2>
+            <ul>
+              <li>Nhảy ngay vào code mà chưa rõ câu hỏi business cần trả lời.</li>
+              <li>Chỉ nhìn output cuối, không kiểm tra bước transform trung gian.</li>
+              <li>Đổi logic nhưng không ghi chú nên team không hiểu vì sao số KPI thay đổi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Prompt Pack</h2>
+            <p><strong>Build prompt:</strong> "Giải thích script Python này theo cấu trúc input -> process -> output -> KPI impact, dùng ví dụ marketing".</p>
+            <p><strong>Debug prompt:</strong> "Script trả về output sai ở cột CTR. Đây là input mẫu và output kỳ vọng. Hãy chỉ ra root cause và patch tối thiểu".</p>
+            <p><strong>Review prompt:</strong> "Review đoạn code này cho mục tiêu readability của marketer non-coder. Chỉ đề xuất thay đổi không làm đổi behavior".</p>
+          </section>
+
+          <section class="block">
+            <h2>Tooling Notes (IDE/CLI/tool pros-cons)</h2>
+            <ul>
+              <li><strong>VS Code:</strong> dễ đọc file tree và search nhanh, nhưng cần setup extension cơ bản.</li>
+              <li><strong>CLI:</strong> chạy script nhanh và lặp lại chuẩn, nhưng ban đầu dễ nhầm đường dẫn.</li>
+              <li><strong>Codex pair:</strong> giải thích code tốt, nhưng phải cung cấp context rõ mới tránh trả lời chung chung.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Optional Upgrade (low-code path)</h2>
+            <ul>
+              <li>Viết thêm hàm kiểm tra dữ liệu rỗng trước khi tính KPI.</li>
+              <li>Tách config ngưỡng KPI ra file riêng để dễ chỉnh mà không sửa logic chính.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Module này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành Foundation 1</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-progress-key="foundation.f1" data-jump-target="../modules.html#foundation" /> Đánh dấu hoàn thành Foundation 1</label>
+              <button class="progress-btn" id="jumpToWeek" type="button" data-jump-target="../modules.html#foundation">Đồng bộ về trang tổng</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="../modules.html#foundation">Mở danh sách Foundation</a>
+              <a class="action-link" href="./f2.html">Foundation 2 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Module: Foundation 1</li>
+              <li>Thời lượng: 35 phút đọc</li>
+              <li>Artifact: Script Map</li>
+              <li>KPI: giải thích được 1 script Python ngắn theo ngữ cảnh business.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h3>Checklist hoàn thành</h3>
+            <ul>
+              <li>Phân tách được input/process/output.</li>
+              <li>Nêu được ít nhất 1 điểm rủi ro dữ liệu.</li>
+              <li>Chạy script thành công trên dữ liệu mẫu.</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="../modules/module.js?v=20260212a"></script>
+  </body>
+</html>

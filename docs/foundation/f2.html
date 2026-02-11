@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F2 - IDE, CLI, Git | Vibe Marketing Lab</title>
+    <meta name="description" content="Foundation F2: IDE, CLI, Git cho marketer non-coder. Thiết lập môi trường dev-lite và workflow commit chuẩn team." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&v=20260211e" rel="stylesheet" />
+    <link rel="stylesheet" href="../modules/module.css?v=20260211e" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../modules.html#foundation">← Quay lại danh sách Foundation</a>
+        <nav class="nav-links" aria-label="Điều hướng Foundation">
+          <a href="./f1.html">Foundation 1</a>
+          <a href="../modules.html#foundation">Bản rút gọn</a>
+          <a href="./f3.html">Foundation 3</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Foundation • F2 • 35 phút đọc</p>
+        <h1>IDE, CLI, Git: Bộ công cụ làm việc chuẩn team</h1>
+        <p>Mục tiêu tuần này là thao tác tự tin trong VS Code, terminal và Git để bạn có thể tham gia workflow team mà không bị nghẽn kỹ thuật.</p>
+        <div class="meta">
+          <span>Mức độ: Nền tảng kỹ thuật</span>
+          <span>Đọc + thực hành: 35 phút đọc</span>
+          <span>Đầu ra: Repo cá nhân + commit log chuẩn</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Business Situation</h2>
+            <figure class="figure">
+              <img src="../media/images/foundation/f2.svg" alt="Foundation F2 ide cli git" />
+              <figcaption>Marketer biết dùng IDE/CLI/Git sẽ giảm phụ thuộc vào người khác khi cần chỉnh sửa và chạy automation.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Concepts You Need</h2>
+            <ul>
+              <li><strong>IDE:</strong> môi trường làm việc với code và file dự án (ở đây dùng VS Code).</li>
+              <li><strong>CLI:</strong> giao diện dòng lệnh để chạy script, kiểm tra file, quản lý dự án.</li>
+              <li><strong>Git:</strong> hệ thống quản lý phiên bản, giúp theo dõi thay đổi và làm việc nhóm.</li>
+              <li><strong>Commit message:</strong> ghi rõ intent thay đổi để review nhanh.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>How Team Does This in Real Life</h2>
+            <ul>
+              <li>Mọi request được ghi thành issue/task trước khi sửa code.</li>
+              <li>Người thực thi tạo branch riêng, chạy thử local, sau đó commit theo mốc logic.</li>
+              <li>Reviewer đọc diff qua commit history, không xem kiểu "đụng đâu sửa đó".</li>
+              <li>Sau khi merge, team kiểm tra lại dashboard KPI để đảm bảo không hồi quy.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Step-by-Step Workflow</h2>
+            <ol>
+              <li>Khởi tạo workspace trong VS Code và mở terminal tích hợp.</li>
+              <li>Clone repo hoặc tạo repo mới, thêm README chuẩn mục tiêu.</li>
+              <li>Chạy script Python từ CLI và xác nhận output.</li>
+              <li>Sửa một thay đổi nhỏ, commit theo thông điệp chuẩn.</li>
+              <li>Push lên GitHub, kiểm tra history có logic rõ ràng.</li>
+              <li>Lặp lại 3 vòng commit cho 3 thay đổi khác nhau.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Mini Case + Numbers</h2>
+            <table>
+              <thead>
+                <tr><th>Tác vụ</th><th>Trước (ad-hoc)</th><th>Sau (IDE/CLI/Git chuẩn)</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Sửa script report</td><td>50 phút + dễ lỗi</td><td>22 phút + có log thay đổi</td></tr>
+                <tr><td>Tìm nguyên nhân KPI lệch</td><td>khó truy vết</td><td>truy vết qua commit trong 8 phút</td></tr>
+                <tr><td>Handover cho team</td><td>thiếu context</td><td>đủ context qua README + commit</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> flow IDE/CLI/Git giúp bạn làm việc có cấu trúc và giảm friction khi cộng tác.</p>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Hands-on Task (45-90 phút)</h2>
+            <ul>
+              <li>Tạo repo `marketing-tech-lab` với README mô tả mục tiêu automation.</li>
+              <li>Chạy 1 script bằng CLI, chụp output thành công.</li>
+              <li>Tạo 3 commit: `feat`, `fix`, `docs` theo format rõ ràng.</li>
+            </ul>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Artifact to Submit</h2>
+            <ul>
+              <li>Link repo GitHub.</li>
+              <li>README có mục tiêu, cách chạy, output mong đợi.</li>
+              <li>Ảnh commit history gồm ít nhất 3 commit chuẩn.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>KPI / Completion Rubric</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Tiêu chí</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Chưa chạy được script bằng CLI.</td></tr>
+                <tr><td>Mức 1</td><td>Chạy được script nhưng commit chưa rõ ràng.</td></tr>
+                <tr><td>Mức 2</td><td>Có 3 commit đúng chuẩn + README đủ dùng.</td></tr>
+                <tr><td>Mức 3</td><td>Repo có cấu trúc rõ và handover được cho người khác.</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Common Failure Patterns</h2>
+            <ul>
+              <li>Commit nhiều thay đổi không liên quan trong cùng một lần.</li>
+              <li>Message commit chung chung kiểu "update" hoặc "fix".</li>
+              <li>Chạy script mà không pin rõ file input/output.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Prompt Pack</h2>
+            <p><strong>Build prompt:</strong> "Hãy đề xuất cấu trúc repo tối thiểu cho marketing automation script với README rõ cách chạy."</p>
+            <p><strong>Debug prompt:</strong> "Lệnh CLI này lỗi. Đây là command, output lỗi, và cấu trúc thư mục. Hãy chỉ ra bước sửa ngắn nhất."</p>
+            <p><strong>Review prompt:</strong> "Review commit messages này theo chuẩn team: rõ scope, action, outcome."</p>
+          </section>
+
+          <section class="block">
+            <h2>Tooling Notes (IDE/CLI/tool pros-cons)</h2>
+            <ul>
+              <li><strong>VS Code:</strong> mạnh ở search/refactor cơ bản, nhưng cần giữ workspace gọn để đỡ rối.</li>
+              <li><strong>GitHub Desktop:</strong> dễ dùng cho người mới, nhưng nên hiểu thêm CLI để xử lý tình huống khó.</li>
+              <li><strong>CLI Git:</strong> linh hoạt và nhanh, nhưng cần luyện command cơ bản đều tay.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Optional Upgrade (low-code path)</h2>
+            <ul>
+              <li>Tạo branch theo ticket và mở PR mô phỏng để luyện flow review.</li>
+              <li>Thêm `requirements.txt` và `run.sh` để chuẩn hóa môi trường chạy.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Module này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành Foundation 2</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-progress-key="foundation.f2" data-jump-target="../modules.html#foundation" /> Đánh dấu hoàn thành Foundation 2</label>
+              <button class="progress-btn" id="jumpToWeek" type="button" data-jump-target="../modules.html#foundation">Đồng bộ về trang tổng</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./f1.html">← Foundation 1</a>
+              <a class="action-link" href="../modules.html#foundation">Mở danh sách Foundation</a>
+              <a class="action-link" href="./f3.html">Foundation 3 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Module: Foundation 2</li>
+              <li>Thời lượng: 35 phút đọc</li>
+              <li>Artifact: Repo + commit log</li>
+              <li>KPI: chạy script CLI + tạo 3 commit chuẩn.</li>
+            </ul>
+          </section>
+          <section class="block">
+            <h3>Checklist hoàn thành</h3>
+            <ul>
+              <li>Repo có README dùng được.</li>
+              <li>Script chạy thành công từ terminal.</li>
+              <li>Commit history rõ mục đích từng thay đổi.</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="../modules/module.js?v=20260212a"></script>
+  </body>
+</html>

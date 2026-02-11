@@ -1,0 +1,18 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#FFF7EE"/>
+  <rect x="48" y="56" width="1184" height="608" rx="24" fill="#FFFFFF" stroke="#E9D3BD" stroke-width="2"/>
+  <text x="88" y="128" fill="#0A6B60" font-family="Manrope, sans-serif" font-size="30" font-weight="700">FOUNDATION F1</text>
+  <text x="88" y="184" fill="#1C2230" font-family="Manrope, sans-serif" font-size="42" font-weight="800">Coding Basics for Marketers</text>
+  <rect x="88" y="238" width="1104" height="90" rx="14" fill="#FFF2E4" stroke="#F2C8A5"/>
+  <text x="118" y="292" fill="#7A3A14" font-family="Manrope, sans-serif" font-size="28" font-weight="700">Input -> Process -> Output -> KPI</text>
+  <rect x="88" y="364" width="220" height="70" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="122" y="408" fill="#1C2230" font-family="Manrope, sans-serif" font-size="26" font-weight="700">Variables</text>
+  <rect x="356" y="364" width="220" height="70" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="425" y="408" fill="#1C2230" font-family="Manrope, sans-serif" font-size="26" font-weight="700">Functions</text>
+  <rect x="624" y="364" width="220" height="70" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="685" y="408" fill="#1C2230" font-family="Manrope, sans-serif" font-size="26" font-weight="700">Logic</text>
+  <rect x="892" y="364" width="300" height="70" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="958" y="408" fill="#1C2230" font-family="Manrope, sans-serif" font-size="26" font-weight="700">File Scripts</text>
+  <rect x="88" y="478" width="1104" height="136" rx="16" fill="#FFF9F1" stroke="#EED7C0"/>
+  <text x="118" y="536" fill="#2A3648" font-family="Manrope, sans-serif" font-size="25" font-weight="600">Target: Read and explain one Python script in business terms.</text>
+</svg>

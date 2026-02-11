@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F4 - Team Coding Workflow + Product Delivery Lifecycle | Vibe Marketing Lab</title>
+    <meta name="description" content="Foundation F4: lifecycle Discovery->Release và team flow Issue->PR->Deploy cho marketer tham gia vận hành sản phẩm." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap&v=20260211e" rel="stylesheet" />
+    <link rel="stylesheet" href="../modules/module.css?v=20260211e" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <a class="back-link" href="../modules.html#foundation">← Quay lại danh sách Foundation</a>
+        <nav class="nav-links" aria-label="Điều hướng Foundation">
+          <a href="./f3.html">Foundation 3</a>
+          <a href="../modules.html#foundation">Bản rút gọn</a>
+          <a href="../modules/w1.html">Tuần 1</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <p class="kicker">Foundation • F4 • 35 phút đọc</p>
+        <h1>Team Coding Workflow + Product Delivery Lifecycle</h1>
+        <p>Tuần chốt nền tảng: hiểu cách team sản phẩm vận hành từ discovery đến release và vai trò của marketer trong mỗi điểm giao.</p>
+        <div class="meta">
+          <span>Mức độ: Nền tảng kỹ thuật</span>
+          <span>Đọc + thực hành: 35 phút đọc</span>
+          <span>Đầu ra: Mini Delivery Playbook</span>
+          <span>Ngôn ngữ: Tiếng Việt</span>
+        </div>
+      </section>
+
+      <div class="grid">
+        <article class="content">
+          <section class="visual-card">
+            <h2>Business Situation</h2>
+            <figure class="figure">
+              <img src="../media/images/foundation/f4.svg" alt="Foundation F4 delivery lifecycle" />
+              <figcaption>Marketer hiểu workflow delivery sẽ giảm việc "ném yêu cầu" thiếu context và tăng tốc chu kỳ triển khai.</figcaption>
+            </figure>
+          </section>
+
+          <section class="block">
+            <h2>Concepts You Need</h2>
+            <ul>
+              <li><strong>Lifecycle:</strong> Discovery -> Spec -> Build -> Test -> Release -> Measure -> Iterate.</li>
+              <li><strong>Issue:</strong> một yêu cầu có mục tiêu, scope, acceptance criteria rõ ràng.</li>
+              <li><strong>PR Review:</strong> cổng kiểm soát chất lượng trước khi deploy.</li>
+              <li><strong>Rollback:</strong> cơ chế quay về bản ổn định nếu release gây lỗi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>How Team Does This in Real Life</h2>
+            <ul>
+              <li>Marketer đóng góp discovery bằng dữ liệu funnel và pain point người dùng.</li>
+              <li>Spec được viết thành user story + acceptance criteria có KPI rõ.</li>
+              <li>Dev triển khai theo issue/branch, reviewer kiểm chuẩn coding + business logic.</li>
+              <li>Sau release, team đối chiếu KPI để quyết định iterate hoặc rollback.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Step-by-Step Workflow</h2>
+            <ol>
+              <li>Viết 1 issue mẫu cho yêu cầu marketing automation.</li>
+              <li>Định nghĩa acceptance criteria đo được (speed, quality, KPI outcome).</li>
+              <li>Mô phỏng branch/PR và review checklist.</li>
+              <li>Lập release checklist gồm smoke test trước khi lên production.</li>
+              <li>Định nghĩa rollback trigger (ví dụ KPI tụt >15% trong 24h).</li>
+              <li>Viết post-release note với quyết định tiếp theo.</li>
+            </ol>
+          </section>
+
+          <section class="case-card">
+            <h2>Mini Case + Numbers</h2>
+            <table>
+              <thead>
+                <tr><th>Case</th><th>Thiếu workflow</th><th>Có workflow chuẩn</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Phát hành flow nurture mới</td><td>2 lỗi production/tuần</td><td>0-1 lỗi/tuần</td></tr>
+                <tr><td>Thời gian từ request đến release</td><td>8 ngày</td><td>4.5 ngày</td></tr>
+                <tr><td>Khả năng truy vết lỗi</td><td>rời rạc, mất 2h</td><td>có log, mất 25 phút</td></tr>
+              </tbody>
+            </table>
+            <p><strong>Kết luận:</strong> workflow delivery rõ giúp team giảm lỗi và giảm lead time triển khai sản phẩm marketing.</p>
+          </section>
+
+          <section class="exercise-card">
+            <h2>Hands-on Task (45-90 phút)</h2>
+            <ul>
+              <li>Viết 1 issue hoàn chỉnh cho tính năng marketing bạn đang cần.</li>
+              <li>Tạo Mini Delivery Playbook gồm RACI, DoD, release checklist.</li>
+              <li>Mô phỏng 1 vòng review: identify 3 risk trước deploy.</li>
+            </ul>
+          </section>
+
+          <section class="artifact-card">
+            <h2>Artifact to Submit</h2>
+            <ul>
+              <li>Issue mẫu có acceptance criteria.</li>
+              <li>Mini Delivery Playbook (RACI + DoD + checklist).</li>
+              <li>Release + rollback note cho case mô phỏng.</li>
+            </ul>
+          </section>
+
+          <section class="table-card">
+            <h2>KPI / Completion Rubric</h2>
+            <table>
+              <thead>
+                <tr><th>Mức</th><th>Tiêu chí</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Mức 0</td><td>Issue chưa có KPI và acceptance criteria rõ.</td></tr>
+                <tr><td>Mức 1</td><td>Có issue nhưng thiếu release/rollback checklist.</td></tr>
+                <tr><td>Mức 2</td><td>Playbook đầy đủ và mô phỏng được vòng delivery.</td></tr>
+                <tr><td>Mức 3</td><td>Nêu được rủi ro chính và kế hoạch kiểm soát sau release.</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="note-card">
+            <h2>Common Failure Patterns</h2>
+            <ul>
+              <li>Spec mơ hồ khiến dev build khác kỳ vọng business.</li>
+              <li>Bỏ qua review checklist nên lỗi business logic lọt production.</li>
+              <li>Không có rollback trigger rõ nên phản ứng chậm khi KPI xấu đi.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Prompt Pack</h2>
+            <p><strong>Build prompt:</strong> "Từ bối cảnh này, hãy viết issue format chuẩn gồm problem, scope, KPI, acceptance criteria".</p>
+            <p><strong>Debug prompt:</strong> "Sau release KPI tụt 18% trong 24h. Hãy đưa rollback checklist và các bước xác minh hậu rollback".</p>
+            <p><strong>Review prompt:</strong> "Review playbook này theo tiêu chí rõ owner, rõ gate, rõ escalations".</p>
+          </section>
+
+          <section class="block">
+            <h2>Tooling Notes (IDE/CLI/tool pros-cons)</h2>
+            <ul>
+              <li><strong>Issue tracker (GitHub/Jira):</strong> tập trung context, nhưng cần discipline cập nhật trạng thái.</li>
+              <li><strong>PR review:</strong> giảm lỗi trước release, nhưng nếu checklist dài quá sẽ chậm nhịp.</li>
+              <li><strong>Deploy logs:</strong> giúp truy vết tốt, nhưng cần chuẩn naming để dễ tìm.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Optional Upgrade (low-code path)</h2>
+            <ul>
+              <li>Thêm CI check đơn giản cho lint/test script trước merge.</li>
+              <li>Tạo template issue và PR để team dùng thống nhất.</li>
+            </ul>
+          </section>
+
+          <section class="block">
+            <h2>Đánh dấu tiến độ</h2>
+            <p id="statusText" class="muted">Module này chưa hoàn thành</p>
+            <div class="status-chip" id="doneChip" hidden>Đã hoàn thành Foundation 4</div>
+            <div class="progress-area">
+              <label><input type="checkbox" data-progress-key="foundation.f4" data-jump-target="../modules.html#foundation" /> Đánh dấu hoàn thành Foundation 4</label>
+              <button class="progress-btn" id="jumpToWeek" type="button" data-jump-target="../modules.html#foundation">Đồng bộ về trang tổng</button>
+            </div>
+            <div class="footer-nav">
+              <a class="action-link" href="./f3.html">← Foundation 3</a>
+              <a class="action-link" href="../modules.html#foundation">Mở danh sách Foundation</a>
+              <a class="action-link" href="../modules/w1.html">Bắt đầu Tuần 1 →</a>
+            </div>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <section class="block">
+            <h3>Thông tin nhanh</h3>
+            <ul>
+              <li>Module: Foundation 4</li>
+              <li>Thời lượng: 35 phút đọc</li>
+              <li>Artifact: Delivery Playbook</li>
+              <li>KPI: mô phỏng được vòng delivery đầy đủ artifact.</li>
+            </ul>
+          </section>
+          <section class="block">
+            <h3>Checklist hoàn thành</h3>
+            <ul>
+              <li>Issue có KPI và acceptance criteria.</li>
+              <li>RACI + DoD rõ owner.</li>
+              <li>Có release checklist và rollback trigger.</li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="../modules/module.js?v=20260212a"></script>
+  </body>
+</html>

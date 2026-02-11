@@ -1,0 +1,21 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#FFF7EE"/>
+  <rect x="48" y="56" width="1184" height="608" rx="24" fill="#FFFFFF" stroke="#E9D3BD" stroke-width="2"/>
+  <text x="88" y="128" fill="#0A6B60" font-family="Manrope, sans-serif" font-size="30" font-weight="700">FOUNDATION F4</text>
+  <text x="88" y="184" fill="#1C2230" font-family="Manrope, sans-serif" font-size="42" font-weight="800">Team Coding Delivery Lifecycle</text>
+  <rect x="88" y="240" width="1104" height="94" rx="14" fill="#FFF2E4" stroke="#F2C8A5"/>
+  <text x="116" y="298" fill="#7A3A14" font-family="Manrope, sans-serif" font-size="27" font-weight="700">Discovery -> Spec -> Build -> Test -> Release -> Measure -> Iterate</text>
+  <rect x="88" y="370" width="170" height="72" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="132" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="24" font-weight="700">Issue</text>
+  <rect x="290" y="370" width="170" height="72" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="332" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="24" font-weight="700">Branch</text>
+  <rect x="492" y="370" width="170" height="72" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="551" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="24" font-weight="700">PR</text>
+  <rect x="694" y="370" width="170" height="72" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="728" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="24" font-weight="700">Review</text>
+  <rect x="896" y="370" width="170" height="72" rx="12" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="925" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="24" font-weight="700">Deploy</text>
+  <rect x="1088" y="370" width="104" height="72" rx="12" fill="#FFF9F1" stroke="#EED7C0"/>
+  <text x="1098" y="414" fill="#1C2230" font-family="Manrope, sans-serif" font-size="20" font-weight="700">Rollback</text>
+  <text x="88" y="614" fill="#2A3648" font-family="Manrope, sans-serif" font-size="25" font-weight="600">Target: simulate one full delivery cycle with complete artifacts.</text>
+</svg>

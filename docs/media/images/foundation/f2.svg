@@ -1,0 +1,22 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="720" rx="28" fill="#FFF7EE"/>
+  <rect x="48" y="56" width="1184" height="608" rx="24" fill="#FFFFFF" stroke="#E9D3BD" stroke-width="2"/>
+  <text x="88" y="128" fill="#0A6B60" font-family="Manrope, sans-serif" font-size="30" font-weight="700">FOUNDATION F2</text>
+  <text x="88" y="184" fill="#1C2230" font-family="Manrope, sans-serif" font-size="42" font-weight="800">IDE, CLI, Git Workflow</text>
+  <rect x="88" y="238" width="336" height="316" rx="14" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="126" y="296" fill="#1C2230" font-family="Manrope, sans-serif" font-size="32" font-weight="700">VS Code</text>
+  <text x="126" y="344" fill="#425469" font-family="Manrope, sans-serif" font-size="24">Workspace</text>
+  <text x="126" y="380" fill="#425469" font-family="Manrope, sans-serif" font-size="24">File tree</text>
+  <text x="126" y="416" fill="#425469" font-family="Manrope, sans-serif" font-size="24">Extensions</text>
+  <rect x="472" y="238" width="336" height="316" rx="14" fill="#FFF2E4" stroke="#F2C8A5"/>
+  <text x="510" y="296" fill="#7A3A14" font-family="Manrope, sans-serif" font-size="32" font-weight="700">CLI</text>
+  <text x="510" y="344" fill="#425469" font-family="Manrope, sans-serif" font-size="24">run scripts</text>
+  <text x="510" y="380" fill="#425469" font-family="Manrope, sans-serif" font-size="24">check files</text>
+  <text x="510" y="416" fill="#425469" font-family="Manrope, sans-serif" font-size="24">debug quickly</text>
+  <rect x="856" y="238" width="336" height="316" rx="14" fill="#FDF5EA" stroke="#E4C5A5"/>
+  <text x="894" y="296" fill="#1C2230" font-family="Manrope, sans-serif" font-size="32" font-weight="700">Git</text>
+  <text x="894" y="344" fill="#425469" font-family="Manrope, sans-serif" font-size="24">commit</text>
+  <text x="894" y="380" fill="#425469" font-family="Manrope, sans-serif" font-size="24">branch</text>
+  <text x="894" y="416" fill="#425469" font-family="Manrope, sans-serif" font-size="24">push</text>
+  <text x="88" y="616" fill="#2A3648" font-family="Manrope, sans-serif" font-size="25" font-weight="600">Target: run one script and create three clean commits.</text>
+</svg>
