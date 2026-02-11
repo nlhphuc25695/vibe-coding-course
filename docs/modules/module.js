@@ -281,6 +281,6 @@ if (weekCheck) {
 if (jumpButton && weekCheck) {
   jumpButton.addEventListener("click", () => {
     const week = Number(weekCheck.dataset.week || "1");
-    window.location.href = `../index.html#w${week}`;
+    window.location.href = `../modules.html#w${week}`;
   });
 }
