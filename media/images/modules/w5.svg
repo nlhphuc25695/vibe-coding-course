@@ -8,17 +8,17 @@
   </defs>
   <rect x="0" y="0" width="1200" height="620" fill="url(#g5)"/>
   <rect x="48" y="46" width="1104" height="528" rx="24" fill="#ffffff" stroke="#cedbf3" stroke-width="2"/>
-  <text x="88" y="120" fill="#0d3f96" font-family="Be Vietnam Pro, sans-serif" font-size="34" font-weight="700">W5 • Thiết kế prompt thực dụng để ra đầu ra ổn định</text>
-  <text x="88" y="166" fill="#4f5f7a" font-family="Be Vietnam Pro, sans-serif" font-size="23">Khung triển khai 4 lớp: Bối cảnh → Framework → Thực thi → Đo lường</text>
+  <text x="88" y="120" fill="#0d3f96" font-family="Manrope, sans-serif" font-size="34" font-weight="700">W5 • Thiết kế prompt thực dụng để ra đầu ra ổn định</text>
+  <text x="88" y="166" fill="#4f5f7a" font-family="Manrope, sans-serif" font-size="23">Khung triển khai 4 lớp: Bối cảnh → Framework → Thực thi → Đo lường</text>
   <rect x="88" y="214" width="240" height="112" rx="14" fill="#eff5ff" stroke="#c6d9ff"/>
   <rect x="350" y="214" width="240" height="112" rx="14" fill="#eff5ff" stroke="#c6d9ff"/>
   <rect x="612" y="214" width="240" height="112" rx="14" fill="#eff5ff" stroke="#c6d9ff"/>
   <rect x="874" y="214" width="240" height="112" rx="14" fill="#eff5ff" stroke="#c6d9ff"/>
-  <text x="112" y="272" fill="#0f428f" font-family="Be Vietnam Pro, sans-serif" font-size="23" font-weight="700">Bối cảnh</text>
-  <text x="374" y="272" fill="#0f428f" font-family="Be Vietnam Pro, sans-serif" font-size="23" font-weight="700">Framework</text>
-  <text x="636" y="272" fill="#0f428f" font-family="Be Vietnam Pro, sans-serif" font-size="23" font-weight="700">Thực thi</text>
-  <text x="898" y="272" fill="#0f428f" font-family="Be Vietnam Pro, sans-serif" font-size="23" font-weight="700">Đo lường</text>
-  <text x="88" y="388" fill="#1b2a47" font-family="Be Vietnam Pro, sans-serif" font-size="22">• Mục tiêu tuần: Xây prompt có cấu trúc để giảm thử sai, giữ chất lượng đồng đều giữa nhiều nhiệm vụ.</text>
-  <text x="88" y="430" fill="#1b2a47" font-family="Be Vietnam Pro, sans-serif" font-size="22">• Artifact đầu ra: mẫu tài liệu + KPI + checklist</text>
-  <text x="88" y="472" fill="#1b2a47" font-family="Be Vietnam Pro, sans-serif" font-size="22">• Cần làm: triển khai thật trên dữ liệu marketing của bạn</text>
+  <text x="112" y="272" fill="#0f428f" font-family="Manrope, sans-serif" font-size="23" font-weight="700">Bối cảnh</text>
+  <text x="374" y="272" fill="#0f428f" font-family="Manrope, sans-serif" font-size="23" font-weight="700">Framework</text>
+  <text x="636" y="272" fill="#0f428f" font-family="Manrope, sans-serif" font-size="23" font-weight="700">Thực thi</text>
+  <text x="898" y="272" fill="#0f428f" font-family="Manrope, sans-serif" font-size="23" font-weight="700">Đo lường</text>
+  <text x="88" y="388" fill="#1b2a47" font-family="Manrope, sans-serif" font-size="22">• Mục tiêu tuần: Xây prompt có cấu trúc để giảm thử sai, giữ chất lượng đồng đều giữa nhiều nhiệm vụ.</text>
+  <text x="88" y="430" fill="#1b2a47" font-family="Manrope, sans-serif" font-size="22">• Artifact đầu ra: mẫu tài liệu + KPI + checklist</text>
+  <text x="88" y="472" fill="#1b2a47" font-family="Manrope, sans-serif" font-size="22">• Cần làm: triển khai thật trên dữ liệu marketing của bạn</text>
 </svg>
