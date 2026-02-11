@@ -435,3 +435,128 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Polish Round 2: long-form readability */
+.content {
+  gap: 14px;
+}
+
+.block,
+.visual-card,
+.case-card,
+.table-card,
+.video-card,
+.exercise-card,
+.artifact-card,
+.note-card,
+.deepdive-card {
+  box-shadow: 0 8px 20px rgba(17, 35, 68, 0.08);
+}
+
+.block h2,
+.visual-card h2,
+.case-card h2,
+.table-card h2,
+.video-card h2,
+.exercise-card h2,
+.artifact-card h2,
+.note-card h2,
+.deepdive-card h2 {
+  letter-spacing: -0.01em;
+}
+
+.content li,
+.sidebar li {
+  line-height: 1.72;
+}
+
+.content p,
+.sidebar p,
+.content li {
+  font-size: 0.97rem;
+}
+
+.table-card table,
+.case-card table {
+  font-size: 0.92rem;
+}
+
+.table-card th,
+.table-card td,
+.case-card th,
+.case-card td {
+  padding: 9px;
+}
+
+.deepdive-pane pre {
+  line-height: 1.58;
+  font-size: 0.83rem;
+}
+
+.progress-area label {
+  border: 1px solid #cfdbef;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f8fbff 0%, #f1f7ff 100%);
+  padding: 8px 10px;
+}
+
+@media (max-width: 680px) {
+  .hero p,
+  .content p,
+  .content li,
+  .sidebar li {
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  h1 {
+    font-size: clamp(1.55rem, 7.2vw, 2rem);
+    line-height: 1.18;
+  }
+
+  .kicker {
+    font-size: 0.68rem;
+  }
+
+  .meta span {
+    font-size: 0.77rem;
+  }
+
+  .block h2,
+  .visual-card h2,
+  .case-card h2,
+  .table-card h2,
+  .video-card h2,
+  .exercise-card h2,
+  .artifact-card h2,
+  .note-card h2,
+  .deepdive-card h2 {
+    font-size: 1.1rem;
+  }
+
+  .table-card,
+  .case-card {
+    overflow-x: auto;
+  }
+
+  .table-card table,
+  .case-card table {
+    min-width: 520px;
+    font-size: 0.84rem;
+  }
+
+  .deepdive-pane pre {
+    font-size: 0.79rem;
+    line-height: 1.5;
+  }
+
+  .progress-area {
+    align-items: stretch;
+  }
+
+  .progress-area label,
+  .progress-btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

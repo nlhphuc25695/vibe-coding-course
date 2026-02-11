@@ -854,3 +854,481 @@ h4 {
     scroll-margin-top: 160px;
   }
 }
+
+/* Hybrid Direction Refresh */
+:root {
+  --bg: #f3f6fb;
+  --surface: #ffffff;
+  --surface-soft: #f7faff;
+  --ink: #18233d;
+  --muted: #53617c;
+  --line: #d6e0ef;
+  --primary: #2b6fff;
+  --primary-strong: #1d57d8;
+  --accent: #20b7ff;
+  --shadow-sm: 0 8px 20px rgba(12, 26, 56, 0.08);
+  --shadow-md: 0 18px 42px rgba(12, 26, 56, 0.12);
+}
+
+html,
+body {
+  background:
+    radial-gradient(1200px 480px at 50% -120px, rgba(39, 93, 255, 0.16), transparent 62%),
+    linear-gradient(180deg, #f7faff 0%, #f1f5fb 52%, #f6f9ff 100%);
+}
+
+.topbar {
+  grid-template-columns: auto minmax(220px, 1fr) auto;
+  border-bottom-color: #d6e0ef;
+  background: rgba(248, 251, 255, 0.84);
+}
+
+.site-nav {
+  display: none;
+}
+
+.top-search input {
+  border-color: #c9d6ea;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.top-cta {
+  background: linear-gradient(90deg, #2e74ff, #1c5ae0);
+  border-color: #2e74ff;
+  box-shadow: 0 8px 20px rgba(43, 111, 255, 0.3);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(74, 163, 255, 0.28), transparent 38%),
+    radial-gradient(circle at 85% 16%, rgba(57, 108, 255, 0.34), transparent 41%),
+    linear-gradient(145deg, #0f1628 0%, #101d3f 48%, #14285f 100%);
+  border-color: #27355a;
+  box-shadow: 0 24px 56px rgba(10, 20, 46, 0.36);
+}
+
+.hero h1,
+.hero .kicker,
+.hero strong,
+.hero .btn-ghost {
+  color: #eef4ff;
+}
+
+.hero-copy {
+  color: #c7d5f2;
+}
+
+.hero-stats article {
+  border-color: rgba(186, 210, 255, 0.24);
+  background: rgba(16, 28, 58, 0.52);
+}
+
+.hero-stats strong {
+  color: #f4f8ff;
+}
+
+.hero-stats span {
+  color: #c0cfec;
+}
+
+.meta-chips span {
+  border-color: rgba(170, 197, 250, 0.36);
+  background: rgba(25, 46, 92, 0.54);
+  color: #d7e6ff;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #2f77ff, #1f5ce0);
+  border-color: #2f77ff;
+  box-shadow: 0 10px 24px rgba(47, 119, 255, 0.3);
+}
+
+.btn-ghost {
+  border-color: rgba(168, 190, 237, 0.52);
+  background: rgba(13, 27, 58, 0.28);
+  color: #e8f0ff;
+}
+
+.hero-proof {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-proof span {
+  border-radius: 999px;
+  border: 1px solid rgba(170, 198, 250, 0.34);
+  background: rgba(18, 34, 72, 0.6);
+  color: #d4e4ff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 11px;
+}
+
+.contrast-story {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.story-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.story-card h3 {
+  margin-top: 2px;
+  font-size: 1.18rem;
+}
+
+.story-card ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.62;
+}
+
+.story-tag {
+  margin: 0;
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid #c8d8f1;
+  background: #eef4ff;
+  color: #24539f;
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+.story-card.is-problem {
+  border-color: #ebcfd0;
+  background: linear-gradient(145deg, #fff6f6 0%, #ffffff 72%);
+}
+
+.story-card.is-problem .story-tag {
+  border-color: #efb6b9;
+  background: #fff0f1;
+  color: #a32c33;
+}
+
+.story-card.is-solution {
+  border-color: #cbe2ff;
+  background: linear-gradient(145deg, #edf5ff 0%, #ffffff 72%);
+}
+
+.course-tabs {
+  border-color: #cfdcf0;
+  background: rgba(245, 250, 255, 0.9);
+  box-shadow: var(--shadow-sm);
+}
+
+.course-main > .section {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.course-main > .section + .section {
+  margin-top: 18px;
+}
+
+.course-main > #modules {
+  background: linear-gradient(180deg, #f8fbff 0%, #f3f8ff 100%);
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 12px;
+}
+
+.section-head p {
+  color: #2a5ba5;
+  letter-spacing: 0.11em;
+}
+
+.roadmap-strip span {
+  border-style: solid;
+  border-color: #d2dff2;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.pillar-section {
+  border-top: 1px solid #d8e2f1;
+  margin-top: 18px;
+  padding-top: 16px;
+}
+
+.lesson-links a {
+  border-color: #c6d6ef;
+  background: #f8fbff;
+  color: #2d4f80;
+}
+
+.lesson {
+  border-color: #cedaec;
+  background: #fff;
+}
+
+.lesson summary {
+  padding: 14px 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+}
+
+.lesson[open] summary {
+  border-bottom-color: #d4deee;
+  background: linear-gradient(180deg, #f5f9ff 0%, #f0f6ff 100%);
+}
+
+.lesson-body {
+  background: #fff;
+}
+
+.lesson-body h4 {
+  margin-top: 4px;
+  color: #164c9e;
+}
+
+.case-card {
+  border-color: #e4dfc9;
+  background: linear-gradient(180deg, #fffcf2 0%, #fff9e8 100%);
+}
+
+.example-output {
+  border-color: #213766;
+  background: linear-gradient(160deg, #0f1c3c 0%, #122752 100%);
+}
+
+.course-sidebar {
+  top: 154px;
+}
+
+.enroll-card {
+  border-color: #cad8ee;
+  background: linear-gradient(170deg, #f0f6ff 0%, #ffffff 62%);
+}
+
+.sidebar-card {
+  border-color: #d5dfed;
+  background: #fff;
+}
+
+.resource-block li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 980px) {
+  .site-nav {
+    display: none;
+  }
+
+  .contrast-story {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    border-radius: 14px;
+  }
+
+  .course-main > .section {
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .course-tabs {
+    margin-top: 12px;
+  }
+}
+
+/* Polish Round 2: lesson rhythm + mobile typography */
+.course-main > .section {
+  padding: 24px;
+}
+
+.course-main > .section h2 {
+  letter-spacing: -0.01em;
+}
+
+.lesson {
+  margin-top: 14px;
+  border-radius: 14px;
+}
+
+.lesson summary {
+  padding: 16px 18px;
+  font-size: 1.03rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.lesson-tag {
+  min-width: 42px;
+  padding: 5px 9px;
+}
+
+.lesson-body {
+  gap: 14px;
+  padding: 16px 18px 20px;
+}
+
+.lesson-body > h4 {
+  margin-top: 2px;
+  margin-bottom: -4px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #1b4f9a;
+}
+
+.lesson-body > p,
+.lesson-body li {
+  font-size: 0.98rem;
+  line-height: 1.74;
+}
+
+.lesson-body ul,
+.lesson-body ol {
+  margin-top: 4px;
+}
+
+.case-card,
+.example-output {
+  border-radius: 12px;
+}
+
+.case-card {
+  padding: 14px;
+}
+
+.case-table {
+  margin-top: 10px;
+  font-size: 0.93rem;
+}
+
+.case-table th,
+.case-table td {
+  padding: 10px;
+}
+
+.example-output {
+  padding: 14px;
+}
+
+.example-output pre {
+  margin-top: 8px;
+  line-height: 1.58;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.week-check {
+  margin-top: 10px;
+  border: 1px solid #cad8ee;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #f7fbff 0%, #f1f7ff 100%);
+  padding: 10px 12px;
+}
+
+.pitfalls li {
+  margin-bottom: 3px;
+}
+
+@media (max-width: 980px) {
+  .course-main > .section {
+    padding: 20px;
+  }
+
+  .lesson summary {
+    font-size: 0.98rem;
+  }
+
+  .lesson-body {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .course-main > .section {
+    padding: 16px;
+  }
+
+  .section-head {
+    margin-bottom: 10px;
+  }
+
+  .section-head p {
+    font-size: 0.69rem;
+  }
+
+  .section-head h2 {
+    font-size: clamp(1.22rem, 6.4vw, 1.6rem);
+  }
+
+  .lesson {
+    margin-top: 12px;
+  }
+
+  .lesson summary {
+    padding: 14px 14px;
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+
+  .lesson-tag {
+    min-width: 38px;
+    padding: 4px 8px;
+    font-size: 0.77rem;
+  }
+
+  .lesson-body {
+    padding: 14px 14px 16px;
+    gap: 11px;
+  }
+
+  .lesson-body > h4 {
+    font-size: 0.82rem;
+    letter-spacing: 0.06em;
+  }
+
+  .lesson-body > p,
+  .lesson-body li {
+    font-size: 0.94rem;
+    line-height: 1.66;
+  }
+
+  .case-card {
+    padding: 12px;
+  }
+
+  .case-table {
+    font-size: 0.86rem;
+    min-width: 540px;
+  }
+
+  .example-output {
+    padding: 12px;
+  }
+
+  .example-output pre {
+    font-size: 0.81rem;
+    line-height: 1.52;
+  }
+
+  .week-check {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
