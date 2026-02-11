@@ -32,6 +32,7 @@ body {
   background-size: 36px 36px, 36px 36px, 100% 100%, 100% 100%;
   line-height: 1.68;
   overflow-x: hidden;
+  font-size: 15.5px;
 }
 
 a {
@@ -131,7 +132,7 @@ h4 {
 
 h1 {
   margin-top: 8px;
-  font-size: clamp(1.66rem, 4.4vw, 2.65rem);
+  font-size: clamp(1.5rem, 4vw, 2.35rem);
   line-height: 1.14;
   font-weight: 800;
 }
@@ -234,7 +235,7 @@ h1 {
 .artifact-card h2,
 .note-card h2,
 .deepdive-card h2 {
-  font-size: 1.2rem;
+  font-size: 1.08rem;
   font-weight: 700;
 }
 
