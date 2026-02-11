@@ -26,7 +26,7 @@ const moduleSearch = document.getElementById("moduleSearch");
 const clearSearch = document.getElementById("clearSearch");
 const searchEmpty = document.getElementById("searchEmpty");
 const moduleGroups = document.querySelectorAll("#modules .module-group");
-const lessons = Array.from(document.querySelectorAll("#modules details.lesson"));
+const lessons = Array.from(document.querySelectorAll("#modules [data-lesson]"));
 
 const STORAGE_KEY = "vibe-course-progress";
 
@@ -198,7 +198,7 @@ function updateContinueButton() {
 
   const week = Number(next.dataset.week);
   continueWeek.textContent = `Tiếp tục: Tuần ${week}`;
-  continueWeek.setAttribute("href", `#w${week}`);
+  continueWeek.setAttribute("href", `./modules/w${week}.html`);
 }
 
 function updateProgressUI() {
@@ -245,20 +245,8 @@ if (resetProgress) {
   });
 }
 
-if (continueWeek) {
-  continueWeek.addEventListener("click", () => {
-    const targetId = continueWeek.getAttribute("href");
-    if (!targetId || !targetId.startsWith("#w")) return;
-    const lesson = document.querySelector(targetId);
-    if (lesson && lesson.tagName.toLowerCase() === "details") {
-      lesson.open = true;
-    }
-  });
-}
-
 lessons.forEach((lesson) => {
-  const summary = lesson.querySelector("summary")?.textContent || "";
-  lesson.dataset.searchIndex = normalizeText(`${lesson.id} ${summary} ${lesson.textContent}`);
+  lesson.dataset.searchIndex = normalizeText(`${lesson.id} ${lesson.textContent}`);
 });
 
 function applyModuleFilter() {
@@ -280,7 +268,7 @@ function applyModuleFilter() {
       return;
     }
 
-    const visibleInGroup = group.querySelectorAll("details.lesson:not([hidden])").length;
+    const visibleInGroup = group.querySelectorAll("[data-lesson]:not([hidden])").length;
     group.classList.toggle("is-filtered-out", visibleInGroup === 0);
   });
 

@@ -365,6 +365,7 @@ h4 {
 .resource-block,
 .lesson,
 .lesson-card,
+.lesson-mini-card,
 .case-card,
 .example-output,
 .search-empty,
@@ -487,6 +488,69 @@ h4 {
 .lesson-links a:hover {
   color: var(--primary);
   border-color: #bcd6ff;
+}
+
+.lesson-mini-grid {
+  margin-top: 12px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.lesson-mini-card {
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  scroll-margin-top: 190px;
+}
+
+.lesson-mini-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lesson-mini-head h3 {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
+.lesson-mini-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.lesson-mini-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.lesson-mini-meta span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  color: #285387;
+  background: #f7fbff;
+}
+
+.lesson-mini-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lesson-mini-actions .week-check {
+  margin-top: 0;
+  padding: 8px 10px;
+  border: 1px solid #cad8ee;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #164f87;
+  font-size: 0.86rem;
 }
 
 .lesson-card ul,
@@ -1251,6 +1315,10 @@ body {
     padding: 20px;
   }
 
+  .lesson-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
   .lesson summary {
     font-size: 0.98rem;
   }
@@ -1275,6 +1343,35 @@ body {
 
   .section-head h2 {
     font-size: clamp(1.22rem, 6.4vw, 1.6rem);
+  }
+
+  .lesson-mini-card {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .lesson-mini-head h3 {
+    font-size: 0.96rem;
+  }
+
+  .lesson-mini-meta span {
+    font-size: 0.77rem;
+    padding: 5px 9px;
+  }
+
+  .lesson-mini-actions {
+    align-items: stretch;
+  }
+
+  .lesson-mini-actions .btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .lesson-mini-actions .week-check {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.85rem;
   }
 
   .lesson {
