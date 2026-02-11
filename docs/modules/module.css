@@ -121,13 +121,14 @@ h2,
 h3,
 h4 {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Be Vietnam Pro", sans-serif;
 }
 
 h1 {
   margin-top: 8px;
   font-size: clamp(1.66rem, 4.4vw, 2.65rem);
   line-height: 1.14;
+  font-weight: 800;
 }
 
 .hero p {
@@ -229,6 +230,7 @@ h1 {
 .note-card h2,
 .deepdive-card h2 {
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .block p,
