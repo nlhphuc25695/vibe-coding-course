@@ -4,28 +4,22 @@ const menuToggle = document.getElementById("menuToggle");
 const siteNav = document.getElementById("siteNav");
 const topSearchForm = document.querySelector(".top-search");
 
-const courseLinks = document.querySelectorAll("[data-course-link]");
-const courseSections = document.querySelectorAll("[data-course-section]");
+const courseLinks = Array.from(document.querySelectorAll("[data-course-link]"));
+const courseSections = Array.from(document.querySelectorAll("[data-course-section]"));
 
-const bottomTabs = document.querySelectorAll(".bottom-tabs a");
-const mobileSections = document.querySelectorAll("[data-mobile-section]");
+const bottomTabs = Array.from(document.querySelectorAll(".bottom-tabs a"));
+const mobileSections = Array.from(document.querySelectorAll("[data-mobile-section]"));
 
-const weekChecks = document.querySelectorAll("[data-week]");
-const progressCounts = [
-  document.getElementById("progressCount"),
-  document.getElementById("sidebarProgressCount"),
-].filter(Boolean);
-const progressBars = [
-  document.getElementById("courseProgress"),
-  document.getElementById("sidebarCourseProgress"),
-].filter(Boolean);
+const weekChecks = Array.from(document.querySelectorAll("[data-week]"));
+const progressCounts = [document.getElementById("progressCount"), document.getElementById("sidebarProgressCount")].filter(Boolean);
+const progressBars = [document.getElementById("courseProgress"), document.getElementById("sidebarCourseProgress")].filter(Boolean);
 const resetProgress = document.getElementById("resetProgress");
 const continueWeek = document.getElementById("continueWeek");
 
 const moduleSearch = document.getElementById("moduleSearch");
 const clearSearch = document.getElementById("clearSearch");
 const searchEmpty = document.getElementById("searchEmpty");
-const moduleGroups = document.querySelectorAll("#modules .module-group");
+const moduleGroups = Array.from(document.querySelectorAll("#modules .module-group"));
 const lessons = Array.from(document.querySelectorAll("#modules [data-lesson]"));
 
 const STORAGE_KEY = "vibe-course-progress";
@@ -43,18 +37,15 @@ function updateScrollProgress() {
   const scrollTop = window.scrollY;
   const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
   const progress = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
+
   if (progressBar) {
     progressBar.style.width = `${progress}%`;
   }
 
   if (topbar) {
-    if (scrollTop > 8) topbar.classList.add("scrolled");
-    else topbar.classList.remove("scrolled");
+    topbar.classList.toggle("scrolled", scrollTop > 8);
   }
 }
-
-window.addEventListener("scroll", updateScrollProgress, { passive: true });
-updateScrollProgress();
 
 if (menuToggle && siteNav) {
   menuToggle.addEventListener("click", () => {
@@ -87,8 +78,7 @@ if (topSearchForm) {
 
 function setCourseActive(key) {
   courseLinks.forEach((link) => {
-    const isActive = link.dataset.courseLink === key;
-    link.classList.toggle("active", isActive);
+    link.classList.toggle("active", link.dataset.courseLink === key);
   });
 }
 
@@ -98,70 +88,55 @@ function setMobileActive(key) {
   });
 }
 
-function setupObserver(sections, onActive, options) {
-  if (!sections.length) return;
+function findActiveByViewport(sections, focusRate = 0.32) {
+  if (!sections.length) return null;
 
-  if (!("IntersectionObserver" in window)) {
-    const update = () => {
-      let activeId = sections[0].id;
-      let bestDistance = Infinity;
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
-        const distance = Math.abs(rect.top - window.innerHeight * 0.32);
-        if (distance < bestDistance) {
-          bestDistance = distance;
-          activeId = section.id;
-        }
-      });
-      onActive(activeId);
-    };
+  const focusY = window.innerHeight * focusRate;
+  let best = sections[0];
+  let bestDistance = Number.POSITIVE_INFINITY;
 
-    let ticking = false;
-    const requestUpdate = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        ticking = false;
-        update();
-      });
-    };
+  sections.forEach((section) => {
+    const rect = section.getBoundingClientRect();
+    const inViewport = rect.bottom > 0 && rect.top < window.innerHeight;
+    if (!inViewport) return;
 
-    window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
-    update();
-    return;
-  }
+    const distance = Math.abs(rect.top - focusY);
+    if (distance < bestDistance) {
+      bestDistance = distance;
+      best = section;
+    }
+  });
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      let candidate = null;
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        if (!candidate || entry.intersectionRatio > candidate.intersectionRatio) {
-          candidate = entry;
-        }
-      });
-      if (candidate) {
-        onActive(candidate.target.id);
-      }
-    },
-    options
-  );
-
-  sections.forEach((section) => observer.observe(section));
+  return best;
 }
 
-setupObserver(
-  Array.from(courseSections),
-  (id) => setCourseActive(id),
-  { threshold: [0.3, 0.45, 0.65], rootMargin: "-16% 0px -50% 0px" }
-);
+function updateActiveStates() {
+  const activeCourseSection = findActiveByViewport(courseSections, 0.3);
+  if (activeCourseSection) {
+    setCourseActive(activeCourseSection.id);
+  }
 
-setupObserver(
-  Array.from(mobileSections),
-  (id) => setMobileActive(id),
-  { threshold: [0.3, 0.45, 0.65], rootMargin: "-12% 0px -58% 0px" }
-);
+  const activeMobileSection = findActiveByViewport(mobileSections, 0.36);
+  if (activeMobileSection) {
+    setMobileActive(activeMobileSection.id);
+  }
+}
+
+let ticking = false;
+function requestUIRefresh() {
+  if (ticking) return;
+  ticking = true;
+  requestAnimationFrame(() => {
+    ticking = false;
+    updateScrollProgress();
+    updateActiveStates();
+  });
+}
+
+window.addEventListener("scroll", requestUIRefresh, { passive: true });
+window.addEventListener("resize", requestUIRefresh);
+updateScrollProgress();
+updateActiveStates();
 
 function loadProgress() {
   try {
@@ -181,14 +156,13 @@ function saveProgress(data) {
 }
 
 function firstIncompleteWeek() {
-  const sorted = Array.from(weekChecks).sort((a, b) => {
-    return Number(a.dataset.week) - Number(b.dataset.week);
-  });
+  const sorted = [...weekChecks].sort((a, b) => Number(a.dataset.week) - Number(b.dataset.week));
   return sorted.find((check) => !check.checked) || null;
 }
 
 function updateContinueButton() {
   if (!continueWeek) return;
+
   const next = firstIncompleteWeek();
   if (!next) {
     continueWeek.textContent = "Đã hoàn thành • Xem dự án";
@@ -204,6 +178,7 @@ function updateContinueButton() {
 function updateProgressUI() {
   const total = weekChecks.length;
   let completed = 0;
+
   weekChecks.forEach((check) => {
     if (check.checked) completed += 1;
   });
@@ -258,7 +233,10 @@ function applyModuleFilter() {
   lessons.forEach((lesson) => {
     const index = lesson.dataset.searchIndex || "";
     const matched = query.length === 0 || index.includes(query);
+
     lesson.hidden = !matched;
+    lesson.classList.toggle("is-match", Boolean(query) && matched);
+
     if (matched) visibleCount += 1;
   });
 
