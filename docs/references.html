@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tham khảo - Vibe Marketing Lab</title>
+    <meta name="description" content="FAQ và tài liệu tham khảo mở rộng cho khóa học Vibe Coding ứng dụng vào marketing." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page="references">
+    <div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+    <header class="topbar" id="topbar">
+      <a href="./index.html" class="brand" aria-label="Vibe Marketing Lab"><span class="brand-dot"></span><span>Vibe Marketing Lab</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Danh mục</button>
+      <nav id="siteNav" class="site-nav" aria-label="Điều hướng chính">
+        <a href="./overview.html" data-nav="overview">Tổng quan</a>
+        <a href="./outcomes.html" data-nav="outcomes">Kết quả</a>
+        <a href="./modules.html" data-nav="modules">Mô-đun</a>
+        <a href="./projects.html" data-nav="projects">Dự án</a>
+        <a href="./references.html" data-nav="references">Tham khảo</a>
+      </nav>
+      <a class="top-cta" href="./modules/w1.html">Học Tuần 1</a>
+    </header>
+
+    <main class="page-wrap">
+      <section class="hero-card">
+        <p class="eyebrow">FAQ và tài liệu</p>
+        <h1>Câu hỏi thường gặp và nguồn tham khảo mở rộng</h1>
+        <p>Tài liệu tham khảo là phần bổ sung. Luồng học chính vẫn nằm trong các bài học tuần.</p>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <p>FAQ</p>
+          <h2>3 câu hỏi phổ biến</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Không biết code có học được không?</summary>
+            <p>Được. Luồng chính dùng no-code và prompt template. Nhánh kỹ thuật là phần mở rộng sau khóa.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Chỉ có 4 giờ mỗi tuần thì có theo kịp không?</summary>
+            <p>Có. Học theo bản MVP của từng tuần và tập trung hoàn thành 3 dự án mini ở giai đoạn cuối.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Học xong có thể dùng ngay gì cho công việc?</summary>
+            <p>Bạn có 3 dự án triển khai được ngay, có KPI và số liệu theo dõi trước/sau.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="section-card">
+        <div class="section-head">
+          <p>Tài liệu mở rộng</p>
+          <h2>Nguồn tham khảo đề xuất</h2>
+        </div>
+        <ul class="resource-list">
+          <li>OpenAI Prompt Best Practices.</li>
+          <li>Google Looker Studio: kết nối dữ liệu và làm dashboard.</li>
+          <li>Zapier và Make: hướng dẫn dựng workflow tự động hóa.</li>
+        </ul>
+      </section>
+
+      <section class="section-card action-strip">
+        <p>Quay về trang mô-đun để học theo tuần.</p>
+        <a class="btn-primary" href="./modules.html">Mở trang Mô-đun</a>
+      </section>
+    </main>
+
+    <nav class="bottom-tabs" aria-label="Điều hướng di động">
+      <a href="./index.html" data-tab="home">Trang chủ</a>
+      <a href="./overview.html" data-tab="overview">Tổng quan</a>
+      <a href="./modules.html" data-tab="modules">Mô-đun</a>
+      <a href="./projects.html" data-tab="projects">Dự án</a>
+      <a href="./references.html" data-tab="references">Tham khảo</a>
+    </nav>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
