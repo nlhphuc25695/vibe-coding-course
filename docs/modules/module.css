@@ -164,6 +164,7 @@ h1 {
 .sidebar,
 .block,
 .visual-card,
+.flow-card,
 .case-card,
 .table-card,
 .video-card,
@@ -180,6 +181,7 @@ h1 {
 .sidebar,
 .block,
 .visual-card,
+.flow-card,
 .case-card,
 .table-card,
 .video-card,
@@ -218,6 +220,7 @@ h1 {
 
 .block h2,
 .visual-card h2,
+.flow-card h2,
 .case-card h2,
 .table-card h2,
 .video-card h2,
@@ -236,6 +239,23 @@ h1 {
 .deepdive-card p {
   margin: 8px 0 0;
   color: var(--muted);
+}
+
+.flow-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.flow-wrap {
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.flow-svg {
+  width: min(760px, 100%);
+  height: auto;
+  display: block;
 }
 
 .muted {

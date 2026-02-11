@@ -193,6 +193,21 @@ const DEEP_DIVE_BY_WEEK = {
   },
 };
 
+const FLOW_BY_WEEK = {
+  1: ["Bối cảnh", "SIPOF", "Điểm nghẽn", "KPI nền", "Cải tiến"],
+  2: ["Giả thuyết", "Ưu tiên", "Thiết kế test", "Chạy test", "Kết luận"],
+  3: ["Danh sách tác vụ", "Phân vai", "Điểm kiểm soát", "Tự động hóa"],
+  4: ["Yêu cầu mơ hồ", "Chuẩn hóa brief", "Đầu ra/KPI", "Giao việc"],
+  5: ["Bối cảnh", "Khung prompt", "Ví dụ đầu ra", "Thư viện"],
+  6: ["Checklist QA", "Chạy QA", "Sửa lỗi", "Cập nhật prompt"],
+  7: ["Mốc nền", "Theo dõi tuần", "So sánh", "Ra quyết định"],
+  8: ["Dữ liệu tuần", "Giữ/Bỏ/Cải tiến", "Chốt 2 thay đổi", "Đo lại"],
+  9: ["Brief", "AI nháp", "QA", "Lịch đăng", "Dashboard"],
+  10: ["Brief tuần", "Pipeline nội dung", "QA", "Lịch đăng", "Báo cáo"],
+  11: ["Backlog test", "Biến thể", "Kết quả", "Kết luận", "Bài học"],
+  12: ["Thu lead", "Phân loại", "Chuỗi chăm sóc", "Đo mở/CTR", "Tối ưu"],
+};
+
 function loadProgress() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -212,6 +227,59 @@ function saveProgress(data) {
 
 function buildList(items) {
   return items.map((item) => `<li>${item}</li>`).join("");
+}
+
+function buildFlowSvg(steps) {
+  const width = 760;
+  const height = 160;
+  const boxWidth = 128;
+  const boxHeight = 48;
+  const gap = 18;
+  const startX = 18;
+  const y = 56;
+  const boxes = steps.map((label, index) => {
+    const x = startX + index * (boxWidth + gap);
+    return `
+      <g>
+        <rect x="${x}" y="${y}" rx="12" ry="12" width="${boxWidth}" height="${boxHeight}" fill="#ffffff" stroke="#c9d9ef" />
+        <text x="${x + boxWidth / 2}" y="${y + 28}" font-size="12" font-weight="600" text-anchor="middle" fill="#1b3f7a">${label}</text>
+      </g>
+    `;
+  });
+
+  const arrows = steps.slice(0, -1).map((_, index) => {
+    const x = startX + boxWidth + index * (boxWidth + gap);
+    const yMid = y + boxHeight / 2;
+    return `<line x1="${x}" y1="${yMid}" x2="${x + gap}" y2="${yMid}" stroke="#8aa7d7" stroke-width="2" marker-end="url(#arrow)" />`;
+  });
+
+  return `
+    <svg class="flow-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Sơ đồ tiến trình tuần">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+          <path d="M 0 0 L 10 5 L 0 10 z" fill="#8aa7d7"></path>
+        </marker>
+      </defs>
+      <rect x="0" y="0" width="${width}" height="${height}" rx="16" ry="16" fill="#f4f8ff" stroke="#d6e3f6" />
+      ${arrows.join("")}
+      ${boxes.join("")}
+    </svg>
+  `;
+}
+
+function injectFlow(week) {
+  const steps = FLOW_BY_WEEK[week];
+  const anchor = document.querySelector(".visual-card");
+  if (!steps || !anchor || !anchor.parentElement) return;
+
+  const section = document.createElement("section");
+  section.className = "flow-card";
+  section.innerHTML = `
+    <h2>Sơ đồ tiến trình tuần</h2>
+    <p>Một sơ đồ ngắn để bạn nhìn nhanh các bước cần hoàn thành.</p>
+    <div class="flow-wrap">${buildFlowSvg(steps)}</div>
+  `;
+  anchor.parentElement.insertBefore(section, anchor.nextSibling);
 }
 
 function injectDeepDive(week) {
@@ -250,6 +318,7 @@ const statusText = document.getElementById("statusText");
 const activeWeek = Number(weekCheck?.dataset.week || "0");
 
 if (activeWeek > 0) {
+  injectFlow(activeWeek);
   injectDeepDive(activeWeek);
 }
 
